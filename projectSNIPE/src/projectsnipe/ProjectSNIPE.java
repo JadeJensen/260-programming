@@ -8,7 +8,7 @@ package projectsnipe;
 import byui.cit260.projectSNIPE.model.Item;
 import byui.cit260.projectSNIPE.model.Player;
 import byui.cit260.projectSNIPE.model.Game;
-
+import byui.cit260.projectSNIPE.model.Character;
 /**
  *
  * @author Jade
@@ -38,7 +38,14 @@ public class ProjectSNIPE {
         gameOne.setTotalTime(0);
         String gameOneInfo = gameOne.toString();
         System.out.println(gameOne);
-        
+        // Character - Class Init
+        Character characterOne = new Character();
+        characterOne.setCoordinants(0);
+        characterOne.setDescription("Description");
+        characterOne.setHealth(0);
+        characterOne.setName("Unnamed");
+        String characterOneInfo = characterOne.toString();
+        System.out.println(characterOne);
     }
     
 }
