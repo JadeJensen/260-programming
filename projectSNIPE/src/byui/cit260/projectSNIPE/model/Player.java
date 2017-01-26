@@ -3,25 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package byui.cit260.projectSNIPE.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author Jade
  */
-public class Player implements Serializable{
-    
+public class Player implements Serializable {
+
     // class instance variables
     private String name;
     private double bestTime;
 
     public Player() {
     }
-    
-    
+
     public String getName() {
         return name;
     }
@@ -71,5 +70,5 @@ public class Player implements Serializable{
     public String toString() {
         return "Player{" + "name=" + name + ", bestTime=" + bestTime + '}';
     }
-    
+
 }

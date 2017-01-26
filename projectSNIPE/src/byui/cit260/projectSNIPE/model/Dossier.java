@@ -4,13 +4,16 @@
  * and open the template in the editor.
  */
 package byui.cit260.projectSNIPE.model;
+
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author Jade
  */
-public class Dossier implements Serializable{
+public class Dossier implements Serializable {
+
     private int dossierNumber;
     private int location;
 
@@ -66,5 +69,5 @@ public class Dossier implements Serializable{
     public String toString() {
         return "Dossier{" + "dossierNumber=" + dossierNumber + ", location=" + location + '}';
     }
-    
+
 }

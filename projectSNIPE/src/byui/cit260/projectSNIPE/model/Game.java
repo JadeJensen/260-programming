@@ -4,13 +4,16 @@
  * and open the template in the editor.
  */
 package byui.cit260.projectSNIPE.model;
+
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author Jade
  */
-public class Game implements Serializable{
+public class Game implements Serializable {
+
     //private variables
     private double totalTime;
     private int noPeople;
@@ -67,6 +70,5 @@ public class Game implements Serializable{
     public String toString() {
         return "Game{" + "totalTime=" + totalTime + ", noPeople=" + noPeople + '}';
     }
-    
-    
+
 }

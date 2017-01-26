@@ -15,6 +15,7 @@ import byui.cit260.projectSNIPE.model.Country;
 import byui.cit260.projectSNIPE.model.City;
 import byui.cit260.projectSNIPE.model.Scene;
 import byui.cit260.projectSNIPE.model.Dossier;
+
 /**
  *
  * @author Jade
@@ -90,5 +91,5 @@ public class ProjectSNIPE {
         String dosOneInfo = dosOne.toString();
         System.out.println(dosOne);
     }
-    
+
 }

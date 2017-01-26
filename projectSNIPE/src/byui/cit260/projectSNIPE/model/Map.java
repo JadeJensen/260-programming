@@ -4,13 +4,16 @@
  * and open the template in the editor.
  */
 package byui.cit260.projectSNIPE.model;
+
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author Jade
  */
-public class Map implements Serializable{
+public class Map implements Serializable {
+
     private int rowCount;
     private int columnCount;
 
@@ -66,5 +69,5 @@ public class Map implements Serializable{
     public String toString() {
         return "Map{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
     }
-    
+
 }

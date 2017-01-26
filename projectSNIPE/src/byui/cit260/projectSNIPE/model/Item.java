@@ -12,7 +12,8 @@ import java.util.Objects;
  *
  * @author Jade
  */
-public class Item implements Serializable{
+public class Item implements Serializable {
+
     //instance variables
     private String inventoryType;
     private int stock;
@@ -82,6 +83,5 @@ public class Item implements Serializable{
     public String toString() {
         return "Item{" + "inventoryType=" + inventoryType + ", stock=" + stock + ", amount=" + amount + '}';
     }
-    
-    
+
 }
