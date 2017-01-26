@@ -9,6 +9,12 @@ import byui.cit260.projectSNIPE.model.Item;
 import byui.cit260.projectSNIPE.model.Player;
 import byui.cit260.projectSNIPE.model.Game;
 import byui.cit260.projectSNIPE.model.Character;
+import byui.cit260.projectSNIPE.model.Map;
+import byui.cit260.projectSNIPE.model.Location;
+import byui.cit260.projectSNIPE.model.Country;
+import byui.cit260.projectSNIPE.model.City;
+import byui.cit260.projectSNIPE.model.Scene;
+import byui.cit260.projectSNIPE.model.Dossier;
 /**
  *
  * @author Jade
@@ -46,6 +52,43 @@ public class ProjectSNIPE {
         characterOne.setName("Unnamed");
         String characterOneInfo = characterOne.toString();
         System.out.println(characterOne);
+        // Map - Class Init
+        Map theMap = new Map();
+        theMap.setColumnCount(0);
+        theMap.setRowCount(0);
+        String theMapInfo = theMap.toString();
+        System.out.println(theMap);
+        // Location - Class Init
+        Location locationOne = new Location();
+        locationOne.setColumn(0);
+        locationOne.setName("Name");
+        locationOne.setRow(0);
+        String locationOneInfo = locationOne.toString();
+        System.out.println(locationOne);
+        // Country - Class Init
+        Country countryOne = new Country();
+        countryOne.setName("Name");
+        String countryOneInfo = countryOne.toString();
+        System.out.println(countryOne);
+        // City - Class Init
+        City cityOne = new City();
+        cityOne.setName("Name");
+        cityOne.setDescription("Description");
+        String cityOneInfo = cityOne.toString();
+        System.out.println(cityOne);
+        // Scene - Class Init
+        Scene sceneOne = new Scene();
+        sceneOne.setBlocked(Boolean.TRUE);
+        sceneOne.setDescription("Description");
+        sceneOne.setName("Name");
+        String sceneOneInfo = sceneOne.toString();
+        System.out.println(sceneOne);
+        // Dossier - Class Init
+        Dossier dosOne = new Dossier();
+        dosOne.setDossierNumber(0);
+        dosOne.setLocation(0);
+        String dosOneInfo = dosOne.toString();
+        System.out.println(dosOne);
     }
     
 }
