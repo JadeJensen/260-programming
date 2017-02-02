@@ -15,7 +15,7 @@ import byui.cit260.projectSNIPE.model.Country;
 import byui.cit260.projectSNIPE.model.City;
 import byui.cit260.projectSNIPE.model.Scene;
 import byui.cit260.projectSNIPE.model.Dossier;
-
+import byui.cit260.projectSNIPE.model.MathPuzzles;
 /**
  *
  * @author Jade
@@ -53,7 +53,11 @@ public class ProjectSNIPE {
         characterOne.setName("Unnamed");
         String characterOneInfo = characterOne.toString();
         System.out.println(characterOne);
-        // Map - Class Init
+        // Math Puzzles Init
+        MathPuzzles mathX = new MathPuzzles();
+        mathX.setMathAnswer("Math Answer");
+        System.out.println(mathX);
+                // Map - Class Init
         Map theMap = new Map();
         theMap.setColumnCount(0);
         theMap.setRowCount(0);
