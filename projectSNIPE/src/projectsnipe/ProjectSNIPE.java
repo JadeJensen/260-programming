@@ -9,6 +9,7 @@ import byui.cit260.projectSNIPE.model.Item;
 import byui.cit260.projectSNIPE.model.Player;
 import byui.cit260.projectSNIPE.model.Game;
 import byui.cit260.projectSNIPE.model.Character;
+import byui.cit260.projectSNIPE.model.MathPuzzles;
 /**
  *
  * @author Jade
@@ -46,6 +47,10 @@ public class ProjectSNIPE {
         characterOne.setName("Unnamed");
         String characterOneInfo = characterOne.toString();
         System.out.println(characterOne);
+        // Math Puzzles Init
+        MathPuzzles mathX = new MathPuzzles();
+        mathX.setMathAnswer("Math Answer");
+        System.out.println(mathX);
     }
     
 }
