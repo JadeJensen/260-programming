@@ -16,6 +16,7 @@ import byui.cit260.projectSNIPE.model.City;
 import byui.cit260.projectSNIPE.model.Scene;
 import byui.cit260.projectSNIPE.model.Dossier;
 import byui.cit260.projectSNIPE.model.MathPuzzles;
+
 /**
  *
  * @author Jade
