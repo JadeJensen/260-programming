@@ -18,7 +18,7 @@ public class Item implements Serializable {
     private String inventoryType;
     private int stock;
     private double amount;
-
+    private double money;
     public Item() {
     }
 
@@ -46,12 +46,21 @@ public class Item implements Serializable {
         this.amount = amount;
     }
 
+    public double getMoney() {
+        return money;
+    }
+
+    public void setMoney(double money) {
+        this.money = money;
+    }
+
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 29 * hash + Objects.hashCode(this.inventoryType);
-        hash = 29 * hash + this.stock;
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.amount) ^ (Double.doubleToLongBits(this.amount) >>> 32));
+        int hash = 5;
+        hash = 53 * hash + Objects.hashCode(this.inventoryType);
+        hash = 53 * hash + this.stock;
+        hash = 53 * hash + (int) (Double.doubleToLongBits(this.amount) ^ (Double.doubleToLongBits(this.amount) >>> 32));
+        hash = 53 * hash + (int) (Double.doubleToLongBits(this.money) ^ (Double.doubleToLongBits(this.money) >>> 32));
         return hash;
     }
 
@@ -73,6 +82,9 @@ public class Item implements Serializable {
         if (Double.doubleToLongBits(this.amount) != Double.doubleToLongBits(other.amount)) {
             return false;
         }
+        if (Double.doubleToLongBits(this.money) != Double.doubleToLongBits(other.money)) {
+            return false;
+        }
         if (!Objects.equals(this.inventoryType, other.inventoryType)) {
             return false;
         }
@@ -81,7 +93,9 @@ public class Item implements Serializable {
 
     @Override
     public String toString() {
-        return "Item{" + "inventoryType=" + inventoryType + ", stock=" + stock + ", amount=" + amount + '}';
+        return "Item{" + "inventoryType=" + inventoryType + ", stock=" + stock + ", amount=" + amount + ", money=" + money + '}';
     }
+
+    
 
 }
