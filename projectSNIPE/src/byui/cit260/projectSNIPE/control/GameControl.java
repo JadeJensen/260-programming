@@ -10,5 +10,5 @@ package byui.cit260.projectSNIPE.control;
  * @author rubengonzalezflores
  */
 public class GameControl {
-    
+
 }
