@@ -22,4 +22,7 @@ public class GameControl {
         ProjectSNIPE.setPlayer(player);
         return player;
     }
+    public static void createNewGame(Player player){
+        System.out.println("createNewGame() stub called ");
+    }
 }
