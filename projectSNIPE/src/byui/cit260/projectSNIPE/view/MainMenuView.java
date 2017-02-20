@@ -102,6 +102,7 @@ public class MainMenuView {
     }
 
     private void helpMenu() {
-        System.out.println("helpMenu() called"); //To change body of generated methods, choose Tools | Templates.
+        HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.displayHelpMenuView();
     }
 }
