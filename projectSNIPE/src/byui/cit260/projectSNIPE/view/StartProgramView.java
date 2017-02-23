@@ -22,7 +22,17 @@ public class StartProgramView {
     }
 
     private void displayBanner() {
-       System.out.println("\nThis is a text based international spy adventure game. \nUpon completion of this final set of training missions, the user becomes a secret agent. \nThe user is assigned a secret agent name and given a dossier containing a brief description of the country, the names of three cities which hold clues, and details about the physical or mental challenge in each city. \nUpon successful completion of at least one challenge per country, the user receives part of a master code that is needed to win the game. \nA user can become injured and lose health points, or die in physical challenges. \nAgent trainees are allowed to rest and recover from injuries in safe houses as they work through their training mission. \nSafe houses are also places to contact their handler and receive the dossier for the next mission. \nEntry into a safe house requires decoding a riddle. \nAs the game progresses, the user gathers clues, solves mysteries, and cracks codes en route to becoming a SNIPE Secret Agent. \nTo win the game the user needs to make it through the entire series of locations solving mysteries without dying, then combine the pieces to complete the master code. \nIf the user is successful, he will be inducted into the SNIPE academy as a secret agent.");
+       System.out.println("\nThis is a text based international spy adventure game. "
+               + "\nUpon completion of this final set of training missions, the user becomes a secret agent. "
+               + "\nThe user is assigned a secret agent name and given a dossier containing a brief description of the country, the names of three cities which hold clues, and details about the physical or mental challenge in each city. "
+               + "\nUpon successful completion of at least one challenge per country, the user receives part of a master code that is needed to win the game. "
+               + "\nA user can become injured and lose health points, or die in physical challenges. "
+               + "\nAgent trainees are allowed to rest and recover from injuries in safe houses as they work through their training mission. "
+               + "\nSafe houses are also places to contact their handler and receive the dossier for the next mission. "
+               + "\nEntry into a safe house requires decoding a riddle. "
+               + "\nAs the game progresses, the user gathers clues, solves mysteries, and cracks codes en route to becoming a SNIPE Secret Agent. "
+               + "\nTo win the game the user needs to make it through the entire series of locations solving mysteries without dying, then combine the pieces to complete the master code. "
+               + "\nIf the user is successful, he will be inducted into the SNIPE academy as a secret agent.");
     }
 
     public void displayStartProgramView() {

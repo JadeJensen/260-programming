@@ -22,7 +22,7 @@ public class HelpMenuView {
                 + "\nB - Game basics"
                 + "\nL - List of available countries to visit"
                 + "\nT - How to travel"
-                + "\nQ - Quit to Main Menu"
+                + "\nQ - Quit to Previous Menu"
                 + "\n-------------------";
     }
     void displayHelpMenuView(){
