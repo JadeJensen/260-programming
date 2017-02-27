@@ -64,7 +64,7 @@ public class StartProgramView {
         return value;
     }
 
-    private boolean doAction(String playersName) {
+    public boolean doAction(String playersName) {
         if (playersName.length() < 2){
         System.out.println("\nInvalid players name: \nThe name must be greater than than one character in length");
             return false;
@@ -87,6 +87,6 @@ public class StartProgramView {
                          +"\n====================================="
         );
         MainMenuView mainMenuView = new MainMenuView();
-        mainMenuView.displayMainMenuView();
+        mainMenuView.display();
     }
 }

@@ -11,10 +11,9 @@ import java.util.Scanner;
  *
  * @author rubengonzalezflores
  */
-public class HelpMenuView {
-    private String menu;
+public class HelpMenuView extends View{
         public HelpMenuView() {
-        this.menu ="\n"
+        super("\n"
                 + "\n-------------------"
                 + "\n| Help Menu        |"
                 + "\n-------------------"
@@ -23,41 +22,13 @@ public class HelpMenuView {
                 + "\nL - List of available countries to visit"
                 + "\nT - How to travel"
                 + "\nQ - Quit to Previous Menu"
-                + "\n-------------------";
+                + "\n-------------------");
     }
-    void displayHelpMenuView(){
-        boolean done = false;
-        do{
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q"))
-                return;
-            done = this.doAction(menuOption);
-        }
-        while(!done);
-        }
-
-    private String getMenuOption() {
-       Scanner keyboard = new Scanner(System.in);
-        String value = "";
-        boolean valid = false;
+        @Override
+    public boolean doAction(String value) {
+        value = value.toUpperCase();
         
-        while (!valid){
-            System.out.println("\n" + this.menu);
-            value = keyboard.nextLine();
-            value = value.trim();
-            if (value.length() < 1){
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-        }
-            break;
-        }
-        return value;
-    }
-
-    private boolean doAction(String choice) {
-        choice = choice.toUpperCase();
-        
-        switch (choice){
+        switch (value){
             case "G":
                 this.gameGoal();
                 break;

@@ -11,48 +11,19 @@ import java.util.Scanner;
  *
  * @author Jade
  */
-public class CollectedCodesView {
-    private String menu;
+public class CollectedCodesView extends View{
+    
     public CollectedCodesView(){
-        this.menu = "\n"
+        super("\n"
                 + "\n----------------"
                 + "\n|Collected Codes Menu     |"
                 + "\nM - Main Menu"
-                + "\nH - Help Menu";
+                + "\nH - Help Menu");
     }
-    void displayGameMenu(){
-       boolean done = false;
-        do{
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q"))
-                return;
-            done = this.doAction(menuOption);
-        }
-        while(!done);
-        }
-
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in);
-        String value = "";
-        boolean valid = false;
-        
-        while (!valid){
-            System.out.println("\n" + this.menu);
-            value = keyboard.nextLine();
-            value = value.trim();
-            if (value.length() < 1){
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-        }
-            break;
-        }
-        return value;
-    }
-
-    private boolean doAction(String choice) {
-       choice = choice.toUpperCase();
-        
-        switch (choice){
+   @Override
+    public boolean doAction(String value) {
+       value = value.toUpperCase();
+            switch (value){
             case "M":
                 this.gameMenu();
                 break;
@@ -67,11 +38,11 @@ public class CollectedCodesView {
     }
       private void gameMenu() {
        MainMenuView mainMenu = new MainMenuView();
-       mainMenu.displayMainMenuView();
+       mainMenu.display();
     }
 
     private void helpMenu() {
        HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenuView();
+        helpMenu.display();
     }
 }
