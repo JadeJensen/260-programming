@@ -6,7 +6,7 @@
 package byui.cit260.projectSNIPE.view;
 
 import byui.cit260.projectSNIPE.control.GameControl;
-import java.util.Scanner;
+//import java.util.Scanner;
 import projectsnipe.ProjectSNIPE;
 
 /**
@@ -68,7 +68,8 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        System.out.println("saveGame() called"); //To change body of generated methods, choose Tools | Templates.
+        SaveGameView saveMenu = new SaveGameView();
+        saveMenu.display();
     }
 
     private void helpMenu() {
