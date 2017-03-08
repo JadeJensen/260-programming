@@ -5,6 +5,9 @@
  */
 package byui.cit260.projectSNIPE.control;
 
+import byui.cit260.projectSNIPE.model.Game;
+import byui.cit260.projectSNIPE.model.Item;
+import byui.cit260.projectSNIPE.model.Map;
 import byui.cit260.projectSNIPE.model.Player;
 import projectsnipe.ProjectSNIPE;
 
@@ -23,6 +26,21 @@ public class GameControl {
         return player;
     }
     public static void createNewGame(Player player){
-        System.out.println("createNewGame() stub called ");
+        Game game = new Game(); 
+        ProjectSNIPE.setCurrentGame(game);
+        
+        game.setPlayer(player);
+        
+        Item[] item = GameControl.createInventoryList();
+        game.setItem(item);
+        
+        Map map = MapControl.createMap();
+        game.setMap(map);
+        
+        MapControl.movePlayerToStartingLocation(map);
+    }
+    public static Item[] createInventoryList(){
+        System.out.println("called createInventoryList in GameControl");
+        return null;
     }
 }

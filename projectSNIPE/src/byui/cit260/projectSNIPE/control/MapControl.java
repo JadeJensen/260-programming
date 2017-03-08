@@ -5,10 +5,16 @@
  */
 package byui.cit260.projectSNIPE.control;
 
+import byui.cit260.projectSNIPE.model.Map;
+
 /**
  *
  * @author JadeJ
  */
 public class MapControl {
-    
+    public static Map createMap(){
+        Map map = null;
+        System.out.println("createMap called in MapControl");
+        return map;
+    }
 }
