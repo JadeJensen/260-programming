@@ -17,7 +17,40 @@ public class Scene implements Serializable {
     private String name;
     private String description;
     private Boolean blocked;
-
+    
+    public enum SceneType{
+        usaAcademy, 
+        usaLibrary,
+        usaArch,
+        germanyWall,
+        germanyCathedral,
+        germanyRiver,
+        englandBigBen,
+        englandWestminster,
+        englandPalace,
+        spainTarragona,
+        spainCathedral,
+        spainValencia,
+        franceEiffelTower,
+        franceLouvre,
+        franceSidewalkCafe,
+        canadaStadium,
+        canadaLibrary,
+        canadaCNTower,
+        brazilBeach,
+        brazilForest,
+        brazilSaoPaolo,
+        australiaOperaHouse,
+        australiaJail,
+        australiaBridge,
+        russiaSquare,
+        russiaLenin,
+        russiaCathedral;
+    }
+    private static Scene[] createScenes(){
+        Scene[] scenes = new Scene[SceneType.values().length];
+        
+    }
     public Scene() {
     }
 
