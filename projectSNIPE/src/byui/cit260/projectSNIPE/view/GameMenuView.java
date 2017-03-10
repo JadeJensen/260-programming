@@ -76,11 +76,12 @@ public class GameMenuView extends View{
     }
 
     private void displaymap() {
+       System.out.println("Not developed yet.");
        Map map = MapControl.createMap();
-       System.out.println("This is the map locations.");
+       System.out.println("\nThis is the map locations.");
        for(int i = 0; i < map.getNoOfRows(); i++){
        System.out.println("-------------"
-               + "/n " + map.getNoOfRows());   
+               + "\n " + map.getNoOfRows());   
                for(int j = 0; j < map.getNoOfColumns(); j++){
                    System.out.println("||"
                            + "\n");
