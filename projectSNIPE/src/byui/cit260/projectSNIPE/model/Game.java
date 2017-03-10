@@ -17,7 +17,10 @@ public class Game implements Serializable {
     //private variables
     private double totalTime;
     private int noPeople;
-
+    private Map map;
+    private Item[] item;
+    private Player player;
+    
     public Game() {
     }
 
@@ -35,6 +38,31 @@ public class Game implements Serializable {
 
     public void setNoPeople(int noPeople) {
         this.noPeople = noPeople;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
+    public Item[] getItem() {
+        return item;
+    }
+
+    public void setItem(Item[] item) {
+        this.item = item;
+    }
+
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
     }
 
     @Override

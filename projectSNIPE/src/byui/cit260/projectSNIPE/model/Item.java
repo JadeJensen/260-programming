@@ -19,6 +19,7 @@ public class Item implements Serializable {
     private int stock;
     private double amount;
     private double money;
+    
     public Item() {
     }
 
