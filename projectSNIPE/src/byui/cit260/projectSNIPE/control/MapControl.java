@@ -6,6 +6,7 @@
 package byui.cit260.projectSNIPE.control;
 
 import byui.cit260.projectSNIPE.model.Map;
+import byui.cit260.projectSNIPE.model.Scene;
 
 /**
  *
@@ -14,7 +15,7 @@ import byui.cit260.projectSNIPE.model.Map;
 public class MapControl {
     public static Map createMap(){
         Map map = new Map(3,9);
-        Scene[] scenes = createScenes();
+        Scene[] scenes = Scene.createScenes();
         GameControl.assignScenesToLocations(map, scenes);
         return map;
     }

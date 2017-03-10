@@ -48,171 +48,229 @@ public class Scene implements Serializable {
         russiaLenin,
         russiaCathedral;
     }
-    private static Scene[] createScenes(){
+    public static Scene[] createScenes(){
         Scene[] scenes = new Scene[SceneType.values().length];
         Scene usaAcademy = new Scene();
+        usaAcademy.setName("USA - SNIPE Academy");
         usaAcademy.setDescription("USA - SNIPE Academy");
         usaAcademy.setBlocked(false);
         usaAcademy.setMapSymbol(" US-Ac ");
         scenes[SceneType.usaAcademy.ordinal()] = usaAcademy;
         
         Scene usaLibrary = new Scene();
+        usaLibrary.setName("USA - Library of Congress");
         usaLibrary.setDescription("USA -  Library");
         usaLibrary.setBlocked(false);
         usaLibrary.setMapSymbol(" US-L ");
         scenes[SceneType.usaLibrary.ordinal()] = usaLibrary;
         
         Scene usaArch = new Scene();
-        usaArch.setDescription("USA -  usaArch");
+        usaArch.setName("USA - Gateway Arch");
+        usaArch.setDescription("USA -  Gateway");
         usaArch.setBlocked(false);
-        usaArch.setMapSymbol(" USA - L ");
+        usaArch.setMapSymbol(" US-Ar ");
         scenes[SceneType.usaArch.ordinal()] = usaArch;
         
         Scene germanyWall = new Scene();
+        germanyWall.setName("Germany - Berlin Wall");
         germanyWall.setDescription("germanyWall");
         germanyWall.setBlocked(false);
-        germanyWall.setMapSymbol(" USA - L ");
+        germanyWall.setMapSymbol(" GM-W ");
         scenes[SceneType.germanyWall.ordinal()] = germanyWall;
         
         Scene germanyCathedral = new Scene();
+        germanyCathedral.setName("Germany - Cologne Cathedral");
         germanyCathedral.setDescription("germanyCathedral");
         germanyCathedral.setBlocked(false);
-        germanyCathedral.setMapSymbol(" USA - L ");
+        germanyCathedral.setMapSymbol(" GM-C ");
         scenes[SceneType.germanyCathedral.ordinal()] = germanyCathedral;
         
         Scene germanyRiver = new Scene();
-        germanyRiver.setDescription("USA -  Library");
+        germanyRiver.setName("Germany - Rhine River");
+        germanyRiver.setDescription("");
         germanyRiver.setBlocked(false);
-        germanyRiver.setMapSymbol(" USA - L ");
+        germanyRiver.setMapSymbol(" GM-R ");
         scenes[SceneType.germanyRiver.ordinal()] = germanyRiver;
         
         Scene englandBigBen = new Scene();
-        englandBigBen.setDescription("USA -  Library");
+        englandBigBen.setName("England - Big Ben");
+        englandBigBen.setDescription("");
         englandBigBen.setBlocked(false);
-        englandBigBen.setMapSymbol(" USA - L ");
+        englandBigBen.setMapSymbol(" EN-B ");
         scenes[SceneType.englandBigBen.ordinal()] = englandBigBen;
         
         Scene englandWestminster = new Scene();
-        englandWestminster.setDescription("USA -  Library");
+        englandWestminster.setName("England - Westminster Abbey");
+        englandWestminster.setDescription("");
         englandWestminster.setBlocked(false);
-        englandWestminster.setMapSymbol(" USA - L ");
+        englandWestminster.setMapSymbol(" EN-W ");
         scenes[SceneType.englandWestminster.ordinal()] = englandWestminster;
         
         Scene englandPalace = new Scene();
-        englandPalace.setDescription("USA -  Library");
+        englandPalace.setName("England - Buckingham Palace");
+        englandPalace.setDescription("");
         englandPalace.setBlocked(false);
-        englandPalace.setMapSymbol(" USA - L ");
+        englandPalace.setMapSymbol(" EN-P ");
         scenes[SceneType.englandPalace.ordinal()] = englandPalace;
         
         Scene spainTarragona = new Scene();
-        spainTarragona.setDescription("USA -  Library");
+        spainTarragona.setName("Spain - Tarragona");
+        spainTarragona.setDescription("");
         spainTarragona.setBlocked(false);
-        spainTarragona.setMapSymbol(" USA - L ");
+        spainTarragona.setMapSymbol(" SP-T ");
         scenes[SceneType.spainTarragona.ordinal()] = spainTarragona;
         
         Scene spainCathedral = new Scene();
-        spainCathedral.setDescription("USA -  Library");
+        spainCathedral.setName("Spain - Cathedral of Seville");
+        spainCathedral.setDescription("");
         spainCathedral.setBlocked(false);
-        spainCathedral.setMapSymbol(" USA - L ");
+        spainCathedral.setMapSymbol(" SP-C ");
         scenes[SceneType.spainCathedral.ordinal()] = spainCathedral;
         
         Scene spainValencia = new Scene();
-        spainValencia.setDescription("USA -  Library");
+        spainValencia.setName("Spain - Valencia");
+        spainValencia.setDescription("");
         spainValencia.setBlocked(false);
-        spainValencia.setMapSymbol(" USA - L ");
+        spainValencia.setMapSymbol(" SP-V ");
         scenes[SceneType.spainValencia.ordinal()] = spainValencia;
         
         Scene franceEiffelTower = new Scene();
-        franceEiffelTower.setDescription("USA -  Library");
+        franceEiffelTower.setName("France - Eiffel Tower");
+        franceEiffelTower.setDescription("");
         franceEiffelTower.setBlocked(false);
-        franceEiffelTower.setMapSymbol(" USA - L ");
+        franceEiffelTower.setMapSymbol(" FR-E ");
         scenes[SceneType.franceEiffelTower.ordinal()] = franceEiffelTower;
         
         Scene franceLouvre = new Scene();
-        franceLouvre.setDescription("USA -  Library");
+        franceLouvre.setName("France - The Louvre");
+        franceLouvre.setDescription("");
         franceLouvre.setBlocked(false);
-        franceLouvre.setMapSymbol(" USA - L ");
+        franceLouvre.setMapSymbol(" FR-L ");
         scenes[SceneType.franceLouvre.ordinal()] = franceLouvre;
         
         Scene franceSidewalkCafe = new Scene();
-        franceSidewalkCafe.setDescription("USA -  Library");
+        franceSidewalkCafe.setName("France - A Sidewalk Cafe");
+        franceSidewalkCafe.setDescription("");
         franceSidewalkCafe.setBlocked(false);
-        franceSidewalkCafe.setMapSymbol(" USA - L ");
+        franceSidewalkCafe.setMapSymbol(" FR-S ");
         scenes[SceneType.franceSidewalkCafe.ordinal()] = franceSidewalkCafe;
         
         Scene canadaStadium = new Scene();
-        canadaStadium.setDescription("USA -  Library");
+        canadaStadium.setName("Canada - Montreal Olympic Stadium");
+        canadaStadium.setDescription("");
         canadaStadium.setBlocked(false);
-        canadaStadium.setMapSymbol(" USA - L ");
+        canadaStadium.setMapSymbol(" CN-S ");
         scenes[SceneType.canadaStadium.ordinal()] = canadaStadium;
         
         Scene canadaLibrary = new Scene();
-        canadaLibrary.setDescription("USA -  Library");
+        canadaLibrary.setName("Canada - Library of Parliament");
+        canadaLibrary.setDescription("");
         canadaLibrary.setBlocked(false);
-        canadaLibrary.setMapSymbol(" USA - L ");
+        canadaLibrary.setMapSymbol(" CN-L ");
         scenes[SceneType.canadaLibrary.ordinal()] = canadaLibrary;
         
         Scene canadaCNTower = new Scene();
-        canadaCNTower.setDescription("USA -  Library");
+        canadaCNTower.setName("Canada - CN Tower");
+        canadaCNTower.setDescription("");
         canadaCNTower.setBlocked(false);
-        canadaCNTower.setMapSymbol(" USA - L ");
+        canadaCNTower.setMapSymbol(" CN-T ");
         scenes[SceneType.canadaCNTower.ordinal()] = canadaCNTower;
         
         Scene brazilBeach = new Scene();
-        brazilBeach.setDescription("USA -  Library");
+        brazilBeach.setName("Brazil - Beach (Rio de Janeiro)");
+        brazilBeach.setDescription("");
         brazilBeach.setBlocked(false);
-        brazilBeach.setMapSymbol(" USA - L ");
+        brazilBeach.setMapSymbol(" BR-B ");
         scenes[SceneType.brazilBeach.ordinal()] = brazilBeach;
         
         Scene brazilForest = new Scene();
-        brazilForest.setDescription("USA -  Library");
+        brazilForest.setName("Brazil - Amazon Forest");
+        brazilForest.setDescription("");
         brazilForest.setBlocked(false);
-        brazilForest.setMapSymbol(" USA - L ");
+        brazilForest.setMapSymbol(" BR-F ");
         scenes[SceneType.brazilForest.ordinal()] = brazilForest;
         
         Scene brazilSaoPaolo = new Scene();
-        brazilSaoPaolo.setDescription("USA -  Library");
+        brazilSaoPaolo.setName("Brazil - Sao Paulo");
+        brazilSaoPaolo.setDescription("");
         brazilSaoPaolo.setBlocked(false);
-        brazilSaoPaolo.setMapSymbol(" USA - L ");
+        brazilSaoPaolo.setMapSymbol(" BR-S ");
         scenes[SceneType.brazilSaoPaolo.ordinal()] = brazilSaoPaolo;
         
         Scene australiaOperaHouse = new Scene();
-        australiaOperaHouse.setDescription("USA -  Library");
+        australiaOperaHouse.setName("Australia - Sydney Opera House");
+        australiaOperaHouse.setDescription("");
         australiaOperaHouse.setBlocked(false);
-        australiaOperaHouse.setMapSymbol(" USA - L ");
+        australiaOperaHouse.setMapSymbol(" AU-O ");
         scenes[SceneType.australiaOperaHouse.ordinal()] = australiaOperaHouse;
         
         Scene australiaJail = new Scene();
-        australiaJail.setDescription("USA -  Library");
+        australiaJail.setName("Australia - Old Melbourne Jail");
+        australiaJail.setDescription("");
         australiaJail.setBlocked(false);
-        australiaJail.setMapSymbol(" USA - L ");
+        australiaJail.setMapSymbol(" AU-J ");
         scenes[SceneType.australiaJail.ordinal()] = australiaJail;
         
         Scene australiaBridge = new Scene();
-        australiaBridge.setDescription("USA -  Library");
+        australiaBridge.setName("Australia - Bridge");
+        australiaBridge.setDescription("");
         australiaBridge.setBlocked(false);
-        australiaBridge.setMapSymbol(" USA - L ");
+        australiaBridge.setMapSymbol(" AU-B ");
         scenes[SceneType.australiaBridge.ordinal()] = australiaBridge;
         
         Scene russiaSquare = new Scene();
-        russiaSquare.setDescription("USA -  Library");
+        russiaSquare.setName("Russia - St. Peter's Square");
+        russiaSquare.setDescription("");
         russiaSquare.setBlocked(false);
-        russiaSquare.setMapSymbol(" USA - L ");
+        russiaSquare.setMapSymbol(" RU-S ");
         scenes[SceneType.russiaSquare.ordinal()] = russiaSquare;
         
         Scene russiaLenin = new Scene();
-        russiaLenin.setDescription("USA -  Library");
+        russiaLenin.setName("Russia - Lenin's Mausoleum");
+        russiaLenin.setDescription("");
         russiaLenin.setBlocked(false);
-        russiaLenin.setMapSymbol(" USA - L ");
+        russiaLenin.setMapSymbol(" RU-L ");
         scenes[SceneType.russiaLenin.ordinal()] = russiaLenin;
         
         Scene russiaCathedral = new Scene();
-        russiaCathedral.setDescription("USA -  Library");
+        russiaCathedral.setName("Russia - St. Basil's Cathedral");
+        russiaCathedral.setDescription("");
         russiaCathedral.setBlocked(false);
-        russiaCathedral.setMapSymbol(" USA - L ");
+        russiaCathedral.setMapSymbol(" RU-C ");
         scenes[SceneType.russiaCathedral.ordinal()] = russiaCathedral;
         return scenes;
     }
+    private static void assignScenesToLocations(Map map, Scene[] scenes){
+        Location [] [] locations = map.getLocations();
+        locations[0][0].setScene(scenes[SceneType.usaAcademy.ordinal()]);
+        locations[0][1].setScene(scenes[SceneType.usaLibrary.ordinal()]);
+        locations[0][2].setScene(scenes[SceneType.usaArch.ordinal()]);
+        locations[1][0].setScene(scenes[SceneType.germanyWall.ordinal()]);
+        locations[1][1].setScene(scenes[SceneType.germanyCathedral.ordinal()]);
+        locations[1][2].setScene(scenes[SceneType.germanyRiver.ordinal()]);
+        locations[2][0].setScene(scenes[SceneType.englandBigBen.ordinal()]);
+        locations[2][1].setScene(scenes[SceneType.englandWestminster.ordinal()]);
+        locations[2][2].setScene(scenes[SceneType.englandPalace.ordinal()]);
+        locations[3][0].setScene(scenes[SceneType.spainTarragona.ordinal()]);
+        locations[3][1].setScene(scenes[SceneType.spainCathedral.ordinal()]);
+        locations[3][2].setScene(scenes[SceneType.spainValencia.ordinal()]);
+        locations[4][0].setScene(scenes[SceneType.franceEiffelTower.ordinal()]);
+        locations[4][1].setScene(scenes[SceneType.franceLouvre.ordinal()]);
+        locations[4][2].setScene(scenes[SceneType.franceSidewalkCafe.ordinal()]);
+        locations[5][0].setScene(scenes[SceneType.canadaStadium.ordinal()]);
+        locations[5][0].setScene(scenes[SceneType.canadaLibrary.ordinal()]);
+        locations[5][0].setScene(scenes[SceneType.canadaCNTower.ordinal()]);
+        locations[6][0].setScene(scenes[SceneType.brazilBeach.ordinal()]);
+        locations[6][1].setScene(scenes[SceneType.brazilForest.ordinal()]);
+        locations[6][2].setScene(scenes[SceneType.brazilSaoPaolo.ordinal()]);
+        locations[7][0].setScene(scenes[SceneType.australiaOperaHouse.ordinal()]);
+        locations[7][1].setScene(scenes[SceneType.australiaJail.ordinal()]);
+        locations[7][2].setScene(scenes[SceneType.australiaBridge.ordinal()]);
+        locations[8][0].setScene(scenes[SceneType.russiaSquare.ordinal()]);
+        locations[8][1].setScene(scenes[SceneType.russiaLenin.ordinal()]);
+        locations[8][2].setScene(scenes[SceneType.russiaCathedral.ordinal()]);
+        
+    }  
     public Scene() {
     }
 

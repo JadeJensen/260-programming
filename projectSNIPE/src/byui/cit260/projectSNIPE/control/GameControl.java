@@ -9,6 +9,7 @@ import byui.cit260.projectSNIPE.model.Game;
 import byui.cit260.projectSNIPE.model.Item;
 import byui.cit260.projectSNIPE.model.Map;
 import byui.cit260.projectSNIPE.model.Player;
+import byui.cit260.projectSNIPE.model.Scene;
 import projectsnipe.ProjectSNIPE;
 
 /**
@@ -38,6 +39,10 @@ public class GameControl {
         game.setMap(map);
         
         MapControl.movePlayerToStartingLocation(map);
+    }
+
+    static void assignScenesToLocations(Map map, Scene[] scenes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     public enum eItem{
         key,

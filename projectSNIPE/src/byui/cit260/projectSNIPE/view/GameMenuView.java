@@ -5,6 +5,8 @@
  */
 package byui.cit260.projectSNIPE.view;
 
+import byui.cit260.projectSNIPE.control.MapControl;
+import byui.cit260.projectSNIPE.model.Map;
 import java.util.Scanner;
 
 /**
@@ -42,7 +44,7 @@ public class GameMenuView extends View{
                 this.gameTravel();
                 break;
             case "V":
-                this.map();
+                this.displaymap();
                 break;
             case "M":
                 this.gameMenu();
@@ -73,8 +75,19 @@ public class GameMenuView extends View{
        
     }
 
-    private void map() {
-       
+    private void displaymap() {
+       Map map = MapControl.createMap();
+       System.out.println("This is the map locations.");
+       for(int i = 0; i < map.getNoOfRows(); i++){
+       System.out.println("-------------"
+               + "/n " + map.getNoOfRows());   
+               for(int j = 0; j < map.getNoOfColumns(); j++){
+                   System.out.println("||"
+                           + "\n");
+                   location = Map.locations [][];
+                   
+               }
+       }
     }
 
     private void gameMenu() {
