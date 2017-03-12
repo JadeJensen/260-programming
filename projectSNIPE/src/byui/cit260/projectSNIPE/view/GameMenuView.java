@@ -13,8 +13,9 @@ import java.util.Scanner;
  *
  * @author rubengonzalezflores
  */
-public class GameMenuView extends View{
-    public GameMenuView(){
+public class GameMenuView extends View {
+
+    public GameMenuView() {
         super("\n"
                 + "\n----------------"
                 + "\n|Game Menu     |"
@@ -26,11 +27,12 @@ public class GameMenuView extends View{
                 + "\nM - Main Menu"
                 + "\nH - Help Menu");
     }
+
     @Override
     public boolean doAction(String value) {
-       value = value.toUpperCase();
-        
-        switch (value){
+        value = value.toUpperCase();
+
+        switch (value) {
             case "D":
                 this.dossier();
                 break;
@@ -44,7 +46,7 @@ public class GameMenuView extends View{
                 this.gameTravel();
                 break;
             case "V":
-                this.displaymap();
+                this.displayMap();
                 break;
             case "M":
                 this.gameMenu();
@@ -55,28 +57,28 @@ public class GameMenuView extends View{
             default:
                 System.out.println("\n***Invalid Selection *** Try Again");
                 break;
-    }
+        }
         return false;
     }
 
     private void dossier() {
-        
+
     }
 
     private void collectedCodes() {
-       
+
     }
 
     private void playerHealth() {
-        
+
     }
 
     private void gameTravel() {
-       
+
     }
 
-    private void displaymap() {
-       System.out.println("Not developed yet.");
+    private void displayMap() {
+        /*       System.out.println("Not developed yet.");
        Map map = MapControl.createMap();
        System.out.println("\nThis is the map locations.");
        for(int i = 0; i < map.getNoOfRows(); i++){
@@ -89,15 +91,19 @@ public class GameMenuView extends View{
                    
                }
        }
+         */
+        System.out.println("displayMap called");
+        
+
     }
 
     private void gameMenu() {
-       MainMenuView mainMenu = new MainMenuView();
-       mainMenu.display();
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.display();
     }
 
     private void helpMenu() {
-       HelpMenuView helpMenu = new HelpMenuView();
+        HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
     }
 }

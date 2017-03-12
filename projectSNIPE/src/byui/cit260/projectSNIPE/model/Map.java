@@ -31,10 +31,10 @@ public class Map implements Serializable {
         this.locations = new Location[noOfRows][noOfColumns];
         for (int row = 0; row < noOfRows; row++){
             for(int column = 0; column < noOfColumns; column++){
-            Location location = new Location();
-            location.setColumn(column);
-            location.setRow(row);
-            location.setVisited(false);
+                Location location = new Location();
+                location.setColumn(column);
+                location.setRow(row);
+                location.setVisited(false);
             
             locations[row][column] = location; 
         }

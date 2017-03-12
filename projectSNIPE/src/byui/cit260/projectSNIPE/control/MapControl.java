@@ -19,4 +19,8 @@ public class MapControl {
         GameControl.assignScenesToLocations(map, scenes);
         return map;
     }
+
+    static void movePlayerToStartingLocation(Map map) {
+        System.out.println("movePlayerToStartingLocation called"); //To change body of generated methods, choose Tools | Templates.
+    }
 }

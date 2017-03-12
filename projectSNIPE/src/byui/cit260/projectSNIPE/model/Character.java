@@ -5,6 +5,7 @@
  */
 package byui.cit260.projectSNIPE.model;
 
+import java.awt.Point;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -18,9 +19,9 @@ public enum Character implements Serializable {
 
     private final String description;
     private final Point coordinates;
-    private final double health;
+//    private final double health;
 
-    public Character(String description) {
+    Character(String description) {
         this.description = description;
         coordinates =  new Point(1,1);
     }
@@ -32,12 +33,12 @@ public enum Character implements Serializable {
     }
 
 
-    public int getCoordinants() {
-        return coordinants;
+    public Point getCoordinants() {
+        return coordinates;
     }
 
 
-    public double getHealth() {
+/*    public double getHealth() {
         return health;
     }
 
@@ -48,5 +49,5 @@ public enum Character implements Serializable {
     public String toString() {
         return "Character{" + "name=" + name + ", description=" + description + ", coordinants=" + coordinants + ", health=" + health + '}';
     }
-
+*/
 }
