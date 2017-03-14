@@ -5,8 +5,14 @@
  */
 package byui.cit260.projectSNIPE.control;
 
+import byui.cit260.projectSNIPE.exceptions.MapControlException;
 import byui.cit260.projectSNIPE.model.Map;
+import byui.cit260.projectSNIPE.model.Player;
 import byui.cit260.projectSNIPE.model.Scene;
+import projectsnipe.ProjectSNIPE;
+import java.awt.Point;
+import java.io.Serializable;
+import java.util.Objects;
 
 /**
  *
@@ -20,7 +26,22 @@ public class MapControl {
         return map;
     }
 
-    static void movePlayerToStartingLocation(Map map) {
-        System.out.println("movePlayerToStartingLocation called"); //To change body of generated methods, choose Tools | Templates.
+    public static void movePlayerToLocation(Player player, Point coordinates) throws MapControlException{
+        Map map = ProjectSNIPE.getCurrentGame().getMap();
+        int newRow = coordinates.x-1;
+        int newColumn = coordinates.y-1;
+        if (newRow < 0 || newRow >= map.getNoOfRows() || newColumn <0 || newColumn >= map.getNoOfColumns()){
+            throw new MapControlException("Cannot move player to location "
+                    + coordinates.x + ", " + coordinates.y
+                            +" because that location is outside "
+                            + "the bounds of the map.");
+        }
     }
-}
+    public static void movePlayerToStartingLocation (Map map) throws MapControlException{
+        Player[] players = Player.values();
+        for (Player player : players){
+            Point coordinates = player.getCoordinates();
+            MapControl.movePlayerToLocation(player, coordinates);
+            }
+        }
+    }

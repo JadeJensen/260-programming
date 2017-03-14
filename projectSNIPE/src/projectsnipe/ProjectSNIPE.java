@@ -28,7 +28,13 @@ public class ProjectSNIPE {
     
     public static void main(String[] args) {
         StartProgramView startProgramView = new StartProgramView();
-        startProgramView.displayStartProgramView();    
+        try {
+        startProgramView.displayStartProgramView();
+        } catch (Throwable te){
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            startProgramView.displayStartProgramView();
+        }
     }
 
     public static Game getCurrentGame() {

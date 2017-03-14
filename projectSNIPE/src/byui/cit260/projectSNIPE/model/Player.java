@@ -5,6 +5,7 @@
  */
 package byui.cit260.projectSNIPE.model;
 
+import java.awt.Point;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -17,6 +18,7 @@ public class Player implements Serializable {
     // class instance variables
     private String name;
     private double bestTime;
+    private Point coordinates;
 
     public Player() {
     }
@@ -37,6 +39,17 @@ public class Player implements Serializable {
         this.bestTime = bestTime;
     }
 
+    public Point getCoordinates() {
+        return coordinates;
+    }
+
+    public void setCoordinates(Point coordinates) {
+        this.coordinates = coordinates;
+    }
+
+    public static Player[] values(){
+        
+    }
     @Override
     public int hashCode() {
         int hash = 7;

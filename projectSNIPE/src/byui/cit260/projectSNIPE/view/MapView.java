@@ -5,6 +5,10 @@
  */
 package byui.cit260.projectSNIPE.view;
 
+import byui.cit260.projectSNIPE.control.MapControl;
+import byui.cit260.projectSNIPE.exceptions.MapControlException;
+import byui.cit260.projectSNIPE.model.Player;
+import java.awt.Point;
 import java.util.Scanner;
 
 /**
@@ -17,7 +21,8 @@ public class MapView extends View{
                 + "\n----------------"
                 + "\n|Map Menu     |"
                 + "\nM - Main Menu"
-                + "\nH - Help Menu");
+                + "\nH - Help Menu"
+                + "\nL - Move Player");
     }
     @Override
     public boolean doAction(String value) {
@@ -29,6 +34,9 @@ public class MapView extends View{
                 break;
             case "H":
                 this.helpMenu();
+                break;
+            case "L":
+                this.movePlayer();
                 break;
             default:
                 System.out.println("\n***Invalid Selection *** Try Again");
@@ -44,5 +52,13 @@ public class MapView extends View{
     private void helpMenu() {
        HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
+    }
+
+    private void movePlayer() {
+        try{
+        MapControl.movePlayerToLocation(player, coordinates);
+        } catch (MapControlException me){
+            System.out.println(me.getMessage());
+        }
     }
 }
