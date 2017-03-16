@@ -23,6 +23,7 @@ public class MainMenuView extends View {
                 + "\nN - Start New Game (This will lose any unsaved progress in the current game)"
                 + "\nR - Return to Player Location"
                 + "\nS - Save Game"
+                + "\nM - Rectangle"
                 + "\nH - Help Menu"
                 + "\nQ - Quit Game (Or previous Menu)"
                 + "\n-------------------");
@@ -42,6 +43,9 @@ public class MainMenuView extends View {
                 break;
             case "S":
                 this.saveGame();
+                break;
+            case "M":
+                this.rectangle();
                 break;
             case "H":// Help Menu
                 this.helpMenu();
@@ -75,5 +79,10 @@ public class MainMenuView extends View {
     private void helpMenu() {
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
+    }
+
+    private void rectangle() {
+        rectangleView rectangleView = new rectangleView();
+        rectangleView.display();
     }
 }
