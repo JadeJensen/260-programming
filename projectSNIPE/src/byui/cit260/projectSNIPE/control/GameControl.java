@@ -5,11 +5,17 @@
  */
 package byui.cit260.projectSNIPE.control;
 
+import static byui.cit260.projectSNIPE.control.GameControl.saveGame;
+import byui.cit260.projectSNIPE.exceptions.MapControlException;
 import byui.cit260.projectSNIPE.model.Game;
 import byui.cit260.projectSNIPE.model.Item;
 import byui.cit260.projectSNIPE.model.Map;
 import byui.cit260.projectSNIPE.model.Player;
 import byui.cit260.projectSNIPE.model.Scene;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import projectsnipe.ProjectSNIPE;
 
 /**
@@ -28,7 +34,7 @@ public class GameControl {
         return player;
     }
 
-    public static void createNewGame(Player player) {
+    public static void createNewGame(Player player) throws MapControlException {
         Game game = new Game();
         ProjectSNIPE.setCurrentGame(game);
 
@@ -46,6 +52,31 @@ public class GameControl {
     static void assignScenesToLocations(Map map, Scene[] scenes) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         System.out.println("assignScenesToLocations called");
+    }
+
+    public static void saveGame(Game game, String filePath) throws GameControlException{
+        try(FileOutputStream fops = new FileOutputStream(filePath)){
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+            output.writeObject(game);
+        }catch(Exception e){
+            throw new GameControlException(e.getMessage());
+        }
+    }
+
+    public static void getSavedGame(String filePath) throws GameControlException{
+        Game game = null;
+        try(FileInputStream fips = new FileInputStream(filePath)){
+            ObjectInputStream input = new ObjectInputStream(fips);
+            game = (Game) input.readObject();
+        }catch(Exception e){
+            throw new GameControlException(e.getMessage());
+        }
+    }
+
+    private static class GameControlException extends Exception {
+
+        public GameControlException(String message) {
+        }
     }
 
     public enum eItem {

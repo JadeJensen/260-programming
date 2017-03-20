@@ -6,6 +6,9 @@
 package byui.cit260.projectSNIPE.view;
 
 import byui.cit260.projectSNIPE.control.GameControl;
+import byui.cit260.projectSNIPE.exceptions.MapControlException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 //import java.util.Scanner;
 import projectsnipe.ProjectSNIPE;
 
@@ -35,8 +38,14 @@ public class MainMenuView extends View {
             case "L": // Loads a saved game; current data lost
                 this.loadSavedGame();
                 break;
-            case "N": // Starts a new game
+            case "N": {
+            try {
+                // Starts a new game
                 this.startNewGame();
+            } catch (MapControlException ex) {
+                System.out.println("Oops something went wrong here...");
+            }
+        }
                 break;
             case "R": //Returns the player location
                 this.playerLocation();
@@ -58,10 +67,18 @@ public class MainMenuView extends View {
     }
 
     private void loadSavedGame() {
-        System.out.println("loadSavedGame() called"); //To change body of generated methods, choose Tools | Templates.
+       this.console.println("\n\nEnter the file path for the file where the game is saved");
+       String filePath = this.getInput();
+       try{
+           GameControl.getSavedGame(filePath);
+       }catch (Exception ex) {
+           ErrorView.display("MainMenuView", ex.getMessage());
+       }
+       GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
 
-    private void startNewGame() {
+    private void startNewGame() throws MapControlException {
         GameControl.createNewGame(ProjectSNIPE.getPlayer());
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
@@ -72,8 +89,13 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        SaveGameView saveMenu = new SaveGameView();
-        saveMenu.display();
+        this.console.println("\n\nEnter the file path for the file where the game is to be saved.");
+        String filePath = this.getInput();
+        try {
+            GameControl.saveGame(ProjectSNIPE.getCurrentGame(), filePath);
+        }catch (Exception ex){
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
     }
 
     private void helpMenu() {
