@@ -19,6 +19,7 @@ public class Player implements Serializable {
     private String name;
     private double bestTime;
     private Point coordinates;
+    private Location location;
 
     public Player() {
     }
@@ -47,9 +48,14 @@ public class Player implements Serializable {
         this.coordinates = coordinates;
     }
 
-    public static Player[] values(){
-        
+    public Location getLocation() {
+        return location;
     }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;

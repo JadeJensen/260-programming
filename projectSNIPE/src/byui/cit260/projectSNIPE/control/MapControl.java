@@ -37,11 +37,7 @@ public class MapControl {
                             + "the bounds of the map.");
         }
     }
-    public static void movePlayerToStartingLocation (Map map) throws MapControlException{
-        Player[] players = Player.values();
-        for (Player player : players){
-            Point coordinates = player.getCoordinates();
-            MapControl.movePlayerToLocation(player, coordinates);
-            }
-        }
+    public static void movePlayerToStartingLocation (Map map, Player player) {
+        player.setLocation(map.getLocations()[0][0]);
     }
+}

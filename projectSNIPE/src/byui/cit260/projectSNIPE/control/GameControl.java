@@ -46,7 +46,7 @@ public class GameControl {
         Map map = MapControl.createMap();
         game.setMap(map);
 
-        MapControl.movePlayerToStartingLocation(map);
+        MapControl.movePlayerToStartingLocation(map, player);
     }
 
     static void assignScenesToLocations(Map map, Scene[] scenes) {
