@@ -29,39 +29,43 @@ import java.util.logging.Logger;
  * @author Jade
  */
 public class ProjectSNIPE {
-        private static Game currentGame = null;
-        private static Player player = null;
-        
-        private static PrintWriter outFile = null;
-        private static BufferedReader inFile = null;
-        
-        private static PrintWriter logFile = null;
+
+    private static Game currentGame = null;
+    private static Player player = null;
+
+    private static PrintWriter outFile = null;
+    private static BufferedReader inFile = null;
+
+    private static PrintWriter logFile = null;
+
     public static void main(String[] args) {
         try {
-        ProjectSNIPE.inFile = new BufferedReader(new InputStreamReader(System.in));
-        ProjectSNIPE.outFile = new PrintWriter(System.out, true);
-        String filePath = "log.txt";
-        ProjectSNIPE.logFile = new PrintWriter(filePath);
-        StartProgramView startProgramView = new StartProgramView();
-        startProgramView.displayStartProgramView();
-        return;
-        } catch (Throwable te){
+            ProjectSNIPE.inFile = new BufferedReader(new InputStreamReader(System.in));
+            ProjectSNIPE.outFile = new PrintWriter(System.out, true);
+            String filePath = "log.txt";
+            ProjectSNIPE.logFile = new PrintWriter(filePath);
+            StartProgramView startProgramView = new StartProgramView();
+            startProgramView.displayStartProgramView();
+            return;
+        } catch (Throwable te) {
             System.out.println(te.getMessage());
             te.printStackTrace();
-        }
-        finally{
+        } finally {
             try {
-                if (ProjectSNIPE.inFile != null)
-                ProjectSNIPE.inFile.close();
-                if (ProjectSNIPE.outFile != null)
-                ProjectSNIPE.outFile.close();
-                if (ProjectSNIPE.logFile != null)
+                if (ProjectSNIPE.inFile != null) {
+                    ProjectSNIPE.inFile.close();
+                }
+                if (ProjectSNIPE.outFile != null) {
+                    ProjectSNIPE.outFile.close();
+                }
+                if (ProjectSNIPE.logFile != null) {
                     ProjectSNIPE.logFile.close();
+                }
             } catch (IOException ex) {
                 System.out.println("Error closing files");
                 return;
             }
-            
+
         }
     }
 
@@ -104,5 +108,5 @@ public class ProjectSNIPE {
     public static void setLogFile(PrintWriter logFile) {
         ProjectSNIPE.logFile = logFile;
     }
-    
+
 }

@@ -54,21 +54,21 @@ public class GameControl {
         System.out.println("assignScenesToLocations called");
     }
 
-    public static void saveGame(Game game, String filePath) throws GameControlException{
-        try(FileOutputStream fops = new FileOutputStream(filePath)){
+    public static void saveGame(Game game, String filePath) throws GameControlException {
+        try (FileOutputStream fops = new FileOutputStream(filePath)) {
             ObjectOutputStream output = new ObjectOutputStream(fops);
             output.writeObject(game);
-        }catch(Exception e){
+        } catch (Exception e) {
             throw new GameControlException(e.getMessage());
         }
     }
 
-    public static void getSavedGame(String filePath) throws GameControlException{
+    public static void getSavedGame(String filePath) throws GameControlException {
         Game game = null;
-        try(FileInputStream fips = new FileInputStream(filePath)){
+        try (FileInputStream fips = new FileInputStream(filePath)) {
             ObjectInputStream input = new ObjectInputStream(fips);
             game = (Game) input.readObject();
-        }catch(Exception e){
+        } catch (Exception e) {
             throw new GameControlException(e.getMessage());
         }
     }

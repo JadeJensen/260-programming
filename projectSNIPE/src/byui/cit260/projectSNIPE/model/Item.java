@@ -19,7 +19,7 @@ public class Item implements Serializable {
     private int stock;
     private double amount;
     private double money;
-    
+
     public Item() {
     }
 
@@ -96,7 +96,5 @@ public class Item implements Serializable {
     public String toString() {
         return "Item{" + "inventoryType=" + inventoryType + ", stock=" + stock + ", amount=" + amount + ", money=" + money + '}';
     }
-
-    
 
 }
