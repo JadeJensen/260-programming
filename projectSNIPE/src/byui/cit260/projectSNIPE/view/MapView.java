@@ -24,6 +24,7 @@ public class MapView extends View {
                 + "\n|Map Menu     |"
                 + "\nM - Main Menu"
                 + "\nH - Help Menu"
+                + "\nP - Print Scene names and descriptions to a file."
                 + "\nL - Move Player");
     }
 
@@ -40,6 +41,9 @@ public class MapView extends View {
                 break;
             case "L":
                 this.movePlayer();
+                break;
+            case "P":
+                this.printScene();
                 break;
             default:
                 System.out.println("\n***Invalid Selection *** Try Again");
@@ -67,5 +71,15 @@ public class MapView extends View {
 //        } catch (MapControlException me) {
 //            System.out.println(me.getMessage());
 //        }
+    }
+
+    private void printScene() {
+        this.console.println("\n\nEnter the file path for the file where the game is to be saved.");
+        String filePath = this.getInput();
+        try {
+            MapControl.printMap(filePath);
+        }catch (Exception ex){
+            ErrorView.display("MapView", ex.getMessage());
+        }
     }
 }

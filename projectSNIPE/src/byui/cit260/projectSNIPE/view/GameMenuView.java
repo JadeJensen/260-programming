@@ -23,7 +23,7 @@ public class GameMenuView extends View {
                 + "\nC - View Collected Codes"
                 + "\nP - View Player Health"
                 + "\nT - Travel"
-                + "\nV - View Map"
+                + "\nV - Map Menu"
                 + "\nM - Main Menu"
                 + "\nH - Help Menu");
     }
@@ -92,7 +92,8 @@ public class GameMenuView extends View {
                }
        }
          */
-        System.out.println("displayMap called");
+        MapView mapView = new MapView();
+        mapView.display();
         
 
     }

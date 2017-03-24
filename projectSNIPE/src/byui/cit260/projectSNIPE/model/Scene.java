@@ -52,140 +52,140 @@ public class Scene implements Serializable {
         Scene[] scenes = new Scene[SceneType.values().length];
         Scene usaAcademy = new Scene();
         usaAcademy.setName("USA - SNIPE Academy");
-        usaAcademy.setDescription("USA - SNIPE Academy");
+        usaAcademy.setDescription("This is the Academy for which you are training for.");
         usaAcademy.setBlocked(false);
         usaAcademy.setMapSymbol(" US-Ac ");
         scenes[SceneType.usaAcademy.ordinal()] = usaAcademy;
         
         Scene usaLibrary = new Scene();
         usaLibrary.setName("USA - Library of Congress");
-        usaLibrary.setDescription("USA -  Library");
+        usaLibrary.setDescription("You can do reseach here.");
         usaLibrary.setBlocked(false);
         usaLibrary.setMapSymbol(" US-L ");
         scenes[SceneType.usaLibrary.ordinal()] = usaLibrary;
         
         Scene usaArch = new Scene();
         usaArch.setName("USA - Gateway Arch");
-        usaArch.setDescription("USA -  Gateway");
+        usaArch.setDescription("You may find that things at the Arch are more deadly than they appear.");
         usaArch.setBlocked(false);
         usaArch.setMapSymbol(" US-Ar ");
         scenes[SceneType.usaArch.ordinal()] = usaArch;
         
         Scene germanyWall = new Scene();
         germanyWall.setName("Germany - Berlin Wall");
-        germanyWall.setDescription("germanyWall");
+        germanyWall.setDescription("The Berlin Wall: Russia's greatest accomplishment in Germany.");
         germanyWall.setBlocked(false);
         germanyWall.setMapSymbol(" GM-W ");
         scenes[SceneType.germanyWall.ordinal()] = germanyWall;
         
         Scene germanyCathedral = new Scene();
         germanyCathedral.setName("Germany - Cologne Cathedral");
-        germanyCathedral.setDescription("germanyCathedral");
+        germanyCathedral.setDescription("The Cologne Cathedral is one of the tallest in Europe.");
         germanyCathedral.setBlocked(false);
         germanyCathedral.setMapSymbol(" GM-C ");
         scenes[SceneType.germanyCathedral.ordinal()] = germanyCathedral;
         
         Scene germanyRiver = new Scene();
         germanyRiver.setName("Germany - Rhine River");
-        germanyRiver.setDescription("");
+        germanyRiver.setDescription("The Rhine River, a river with vinyards running with wine, and sometime blood.");
         germanyRiver.setBlocked(false);
         germanyRiver.setMapSymbol(" GM-R ");
         scenes[SceneType.germanyRiver.ordinal()] = germanyRiver;
         
         Scene englandBigBen = new Scene();
         englandBigBen.setName("England - Big Ben");
-        englandBigBen.setDescription("");
+        englandBigBen.setDescription("Big Ben used to be the tallest clock in the world.  It may be the first a murder has ever happened in too.");
         englandBigBen.setBlocked(false);
         englandBigBen.setMapSymbol(" EN-B ");
         scenes[SceneType.englandBigBen.ordinal()] = englandBigBen;
         
         Scene englandWestminster = new Scene();
         englandWestminster.setName("England - Westminster Abbey");
-        englandWestminster.setDescription("");
+        englandWestminster.setDescription("Westminster Abbey is to the Church of England as the Vatican is to Catholics.  Both have unsolved mysteries.");
         englandWestminster.setBlocked(false);
         englandWestminster.setMapSymbol(" EN-W ");
         scenes[SceneType.englandWestminster.ordinal()] = englandWestminster;
         
         Scene englandPalace = new Scene();
         englandPalace.setName("England - Buckingham Palace");
-        englandPalace.setDescription("");
+        englandPalace.setDescription("The Queen's personal residence.  Tread carefully here.  Spies are everywhere.");
         englandPalace.setBlocked(false);
         englandPalace.setMapSymbol(" EN-P ");
         scenes[SceneType.englandPalace.ordinal()] = englandPalace;
         
         Scene spainTarragona = new Scene();
         spainTarragona.setName("Spain - Tarragona");
-        spainTarragona.setDescription("");
+        spainTarragona.setDescription("Once a Roman colony, they performed sacrafices to Jupiter.  They may still do so today.");
         spainTarragona.setBlocked(false);
         spainTarragona.setMapSymbol(" SP-T ");
         scenes[SceneType.spainTarragona.ordinal()] = spainTarragona;
         
         Scene spainCathedral = new Scene();
         spainCathedral.setName("Spain - Cathedral of Seville");
-        spainCathedral.setDescription("");
+        spainCathedral.setDescription("The largest Gothic cathedral in the world.  Be careful, or Dante's Inferno might catch up with you.");
         spainCathedral.setBlocked(false);
         spainCathedral.setMapSymbol(" SP-C ");
         scenes[SceneType.spainCathedral.ordinal()] = spainCathedral;
         
         Scene spainValencia = new Scene();
         spainValencia.setName("Spain - Valencia");
-        spainValencia.setDescription("");
+        spainValencia.setDescription("A popular tourist city next to the Mediterranean Sea.");
         spainValencia.setBlocked(false);
         spainValencia.setMapSymbol(" SP-V ");
         scenes[SceneType.spainValencia.ordinal()] = spainValencia;
         
         Scene franceEiffelTower = new Scene();
         franceEiffelTower.setName("France - Eiffel Tower");
-        franceEiffelTower.setDescription("");
+        franceEiffelTower.setDescription("Everyone knows the Eiffel Tower.  Some people would kill to see it.");
         franceEiffelTower.setBlocked(false);
         franceEiffelTower.setMapSymbol(" FR-E ");
         scenes[SceneType.franceEiffelTower.ordinal()] = franceEiffelTower;
         
         Scene franceLouvre = new Scene();
         franceLouvre.setName("France - The Louvre");
-        franceLouvre.setDescription("");
+        franceLouvre.setDescription("The Louvre holds many priceless arts and artifacts.  People have killed to get their hands on this stuff.");
         franceLouvre.setBlocked(false);
         franceLouvre.setMapSymbol(" FR-L ");
         scenes[SceneType.franceLouvre.ordinal()] = franceLouvre;
         
         Scene franceSidewalkCafe = new Scene();
         franceSidewalkCafe.setName("France - A Sidewalk Cafe");
-        franceSidewalkCafe.setDescription("");
+        franceSidewalkCafe.setDescription("Be careful, the coffee may be poisoned.");
         franceSidewalkCafe.setBlocked(false);
         franceSidewalkCafe.setMapSymbol(" FR-S ");
         scenes[SceneType.franceSidewalkCafe.ordinal()] = franceSidewalkCafe;
         
         Scene canadaStadium = new Scene();
         canadaStadium.setName("Canada - Montreal Olympic Stadium");
-        canadaStadium.setDescription("");
+        canadaStadium.setDescription("No shady deals have been made to make sure Canada gets gold metals here.");
         canadaStadium.setBlocked(false);
         canadaStadium.setMapSymbol(" CN-S ");
         scenes[SceneType.canadaStadium.ordinal()] = canadaStadium;
         
         Scene canadaLibrary = new Scene();
         canadaLibrary.setName("Canada - Library of Parliament");
-        canadaLibrary.setDescription("");
+        canadaLibrary.setDescription("Another library containing things the US Congressional Library won't hold.  Or so we think.");
         canadaLibrary.setBlocked(false);
         canadaLibrary.setMapSymbol(" CN-L ");
         scenes[SceneType.canadaLibrary.ordinal()] = canadaLibrary;
         
         Scene canadaCNTower = new Scene();
         canadaCNTower.setName("Canada - CN Tower");
-        canadaCNTower.setDescription("");
+        canadaCNTower.setDescription("One of the largest communications and observation towers.  One can watch terrorist plots from here.");
         canadaCNTower.setBlocked(false);
         canadaCNTower.setMapSymbol(" CN-T ");
         scenes[SceneType.canadaCNTower.ordinal()] = canadaCNTower;
         
         Scene brazilBeach = new Scene();
         brazilBeach.setName("Brazil - Beach (Rio de Janeiro)");
-        brazilBeach.setDescription("");
+        brazilBeach.setDescription("Rio de Janeiro can be a fun place, but don't get caught up in the partying.");
         brazilBeach.setBlocked(false);
         brazilBeach.setMapSymbol(" BR-B ");
         scenes[SceneType.brazilBeach.ordinal()] = brazilBeach;
         
         Scene brazilForest = new Scene();
         brazilForest.setName("Brazil - Amazon Forest");
-        brazilForest.setDescription("");
+        brazilForest.setDescription("The Amazon Forest is a truly amazing place.  There are many ways to die here.");
         brazilForest.setBlocked(false);
         brazilForest.setMapSymbol(" BR-F ");
         scenes[SceneType.brazilForest.ordinal()] = brazilForest;

@@ -11,6 +11,10 @@ import byui.cit260.projectSNIPE.model.Player;
 import byui.cit260.projectSNIPE.model.Scene;
 import projectsnipe.ProjectSNIPE;
 import java.awt.Point;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -19,25 +23,36 @@ import java.util.Objects;
  * @author JadeJ
  */
 public class MapControl {
-    public static Map createMap(){
-        Map map = new Map(3,9);
+
+    public static Map createMap() {
+        Map map = new Map(3, 9);
         Scene[] scenes = Scene.createScenes();
         GameControl.assignScenesToLocations(map, scenes);
         return map;
     }
 
-    public static void movePlayerToLocation(Player player, Point coordinates) throws MapControlException{
+    public static void movePlayerToLocation(Player player, Point coordinates) throws MapControlException {
         Map map = ProjectSNIPE.getCurrentGame().getMap();
-        int newRow = coordinates.x-1;
-        int newColumn = coordinates.y-1;
-        if (newRow < 0 || newRow >= map.getNoOfRows() || newColumn <0 || newColumn >= map.getNoOfColumns()){
+        int newRow = coordinates.x - 1;
+        int newColumn = coordinates.y - 1;
+        if (newRow < 0 || newRow >= map.getNoOfRows() || newColumn < 0 || newColumn >= map.getNoOfColumns()) {
             throw new MapControlException("Cannot move player to location "
                     + coordinates.x + ", " + coordinates.y
-                            +" because that location is outside "
-                            + "the bounds of the map.");
+                    + " because that location is outside "
+                    + "the bounds of the map.");
         }
     }
-    public static void movePlayerToStartingLocation (Map map, Player player) {
+
+    public static void movePlayerToStartingLocation(Map map, Player player) {
         player.setLocation(map.getLocations()[0][0]);
+    }
+
+    public static void printMap(String filePath) throws MapControlException {
+        try (FileOutputStream fops = new FileOutputStream(filePath)) {
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+            output.writeObject(Scene.createScenes());
+        } catch (Exception e) {
+            throw new MapControlException(e.getMessage());
+        }
     }
 }
