@@ -62,11 +62,13 @@ public class GameMenuView extends View {
     }
 
     private void dossier() {
-
+        DossierView DossierView = new DossierView();
+        DossierView.display();
     }
 
     private void collectedCodes() {
-
+        CollectedCodesView CollectedCodesView = new CollectedCodesView();
+        CollectedCodesView.display();
     }
 
     private void playerHealth() {

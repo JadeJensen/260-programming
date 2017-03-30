@@ -18,6 +18,7 @@ public class CollectedCodesView extends View{
                 + "\n----------------"
                 + "\n|Collected Codes Menu     |"
                 + "\nM - Main Menu"
+                + "\nG - Game Menu"
                 + "\nH - Help Menu");
     }
    @Override
@@ -25,18 +26,20 @@ public class CollectedCodesView extends View{
        value = value.toUpperCase();
             switch (value){
             case "M":
-                this.gameMenu();
+                this.mainMenu();
                 break;
             case "H":
                 this.helpMenu();
                 break;
+            case "G":
+                this.gameMenu();
             default:
                 System.out.println("\n***Invalid Selection *** Try Again");
                 break;
     }
         return false;
     }
-      private void gameMenu() {
+      private void mainMenu() {
        MainMenuView mainMenu = new MainMenuView();
        mainMenu.display();
     }
@@ -45,4 +48,8 @@ public class CollectedCodesView extends View{
        HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
     }
+    private void gameMenu() {
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
+}
 }

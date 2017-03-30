@@ -5,24 +5,14 @@
  */
 package projectsnipe;
 
-import byui.cit260.projectSNIPE.model.Item;
 import byui.cit260.projectSNIPE.model.Player;
 import byui.cit260.projectSNIPE.model.Game;
-import byui.cit260.projectSNIPE.model.Character;
-import byui.cit260.projectSNIPE.model.Map;
-import byui.cit260.projectSNIPE.model.Location;
-import byui.cit260.projectSNIPE.model.Country;
-import byui.cit260.projectSNIPE.model.City;
-import byui.cit260.projectSNIPE.model.Scene;
-import byui.cit260.projectSNIPE.model.Dossier;
-import byui.cit260.projectSNIPE.model.MathPuzzles;
 import byui.cit260.projectSNIPE.view.StartProgramView;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *

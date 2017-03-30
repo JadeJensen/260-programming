@@ -5,7 +5,6 @@
  */
 package byui.cit260.projectSNIPE.control;
 
-import static byui.cit260.projectSNIPE.control.GameControl.saveGame;
 import byui.cit260.projectSNIPE.exceptions.MapControlException;
 import byui.cit260.projectSNIPE.model.Game;
 import byui.cit260.projectSNIPE.model.Item;
