@@ -14,10 +14,10 @@ import static org.junit.Assert.*;
  * @author JadeJ
  */
 public class InventoryControlTest {
-    
+
     public InventoryControlTest() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
@@ -34,49 +34,49 @@ public class InventoryControlTest {
         double expResult = 7600.0;
         double result = instance.calcNewMoney(money, exchangeRate);
         assertEquals(expResult, result, 1.0);
-    //#2
+        //#2
         System.out.println("Test case #2");
         money = 0.0;
         exchangeRate = 20.0;
-         expResult = -1;
+        expResult = -1;
         result = instance.calcNewMoney(money, exchangeRate);
         assertEquals(expResult, result, 1.0);
-    //3
+        //3
         System.out.println("Test case #3");
-         money = 1001.0;
-         exchangeRate = 10.0;
-         expResult = -1;
-         result = instance.calcNewMoney(money, exchangeRate);
+        money = 1001.0;
+        exchangeRate = 10.0;
+        expResult = -1;
+        result = instance.calcNewMoney(money, exchangeRate);
         assertEquals(expResult, result, 1.0);
-    //4
+        //4
         System.out.println("Test case #4");
         money = 400.0;
         exchangeRate = 65.0;
         expResult = -1;
         result = instance.calcNewMoney(money, exchangeRate);
         assertEquals(expResult, result, 1.0);
-    //5
+        //5
         System.out.println("Test case #5");
         money = 10.0;
         exchangeRate = 45.0;
         expResult = 427.5;
         result = instance.calcNewMoney(money, exchangeRate);
         assertEquals(expResult, result, 1.0);
-    //6
+        //6
         System.out.println("Test case #6");
         money = 1000.0;
         exchangeRate = 23.0;
         expResult = 21850;
         result = instance.calcNewMoney(money, exchangeRate);
         assertEquals(expResult, result, 1.0);
-    //7
+        //7
         System.out.println("Test case #7");
         money = 345.0;
         exchangeRate = 10.0;
         expResult = 3277.5;
         result = instance.calcNewMoney(money, exchangeRate);
         assertEquals(expResult, result, 1.0);
-    //8
+        //8
         System.out.println("Test case #8");
         money = 657.0;
         exchangeRate = 59.0;

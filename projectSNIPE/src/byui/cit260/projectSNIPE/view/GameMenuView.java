@@ -96,7 +96,6 @@ public class GameMenuView extends View {
          */
         MapView mapView = new MapView();
         mapView.display();
-        
 
     }
 

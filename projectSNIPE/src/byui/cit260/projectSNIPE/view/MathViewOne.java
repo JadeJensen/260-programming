@@ -12,19 +12,20 @@ import java.util.Scanner;
  * @author Jade
  */
 public class MathViewOne extends View {
-            
-    public MathViewOne(){
+
+    public MathViewOne() {
         super("\n"
                 + "\n----------------"
                 + "\n|Math 1 Menu     |"
                 + "\nM - Main Menu"
                 + "\nH - Help Menu");
     }
-   @Override
+
+    @Override
     public boolean doAction(String value) {
-       value = value.toUpperCase();
-        
-        switch (value){
+        value = value.toUpperCase();
+
+        switch (value) {
             case "M":
                 this.gameMenu();
                 break;
@@ -34,16 +35,17 @@ public class MathViewOne extends View {
             default:
                 System.out.println("\n***Invalid Selection *** Try Again");
                 break;
-    }
+        }
         return false;
     }
-      private void gameMenu() {
-       MainMenuView mainMenu = new MainMenuView();
-       mainMenu.display();
+
+    private void gameMenu() {
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.display();
     }
 
     private void helpMenu() {
-       HelpMenuView helpMenu = new HelpMenuView();
+        HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
     }
 }

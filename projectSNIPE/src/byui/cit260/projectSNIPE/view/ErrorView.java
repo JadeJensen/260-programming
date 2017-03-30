@@ -13,13 +13,15 @@ import projectsnipe.ProjectSNIPE;
  * @author Jade
  */
 public class ErrorView {
+
     private static final PrintWriter errorFile = ProjectSNIPE.getOutFile();
     private static final PrintWriter logFile = ProjectSNIPE.getLogFile();
-    public static void display(String className, String errorMessage){
+
+    public static void display(String className, String errorMessage) {
         errorFile.println(
                 "-------------------------------------------------"
-              + "\n - ERROR - " + errorMessage + 
-                "\n------------------------------------------------");
+                + "\n - ERROR - " + errorMessage
+                + "\n------------------------------------------------");
         logFile.println(className + " - " + errorMessage);
     }
 }

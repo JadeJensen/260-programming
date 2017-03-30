@@ -20,7 +20,7 @@ public class Game implements Serializable {
     private Map map;
     private Item[] item;
     private Player player;
-    
+
     public Game() {
     }
 
@@ -55,7 +55,6 @@ public class Game implements Serializable {
     public void setItem(Item[] item) {
         this.item = item;
     }
-
 
     public Player getPlayer() {
         return player;

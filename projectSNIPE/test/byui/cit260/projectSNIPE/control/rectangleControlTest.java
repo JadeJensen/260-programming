@@ -14,10 +14,10 @@ import static org.junit.Assert.*;
  * @author JadeJ
  */
 public class rectangleControlTest {
-    
+
     public rectangleControlTest() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
@@ -78,5 +78,5 @@ public class rectangleControlTest {
         result = instance.rectangleVolumeCalc(length, width, height);
         assertEquals(expResult, result, 1.0);
     }
-    
+
 }

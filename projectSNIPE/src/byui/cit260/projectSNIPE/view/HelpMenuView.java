@@ -11,8 +11,9 @@ import java.util.Scanner;
  *
  * @author rubengonzalezflores
  */
-public class HelpMenuView extends View{
-        public HelpMenuView() {
+public class HelpMenuView extends View {
+
+    public HelpMenuView() {
         super("\n"
                 + "\n-------------------"
                 + "\n| Help Menu        |"
@@ -24,11 +25,12 @@ public class HelpMenuView extends View{
                 + "\nQ - Quit to Previous Menu"
                 + "\n-------------------");
     }
-        @Override
+
+    @Override
     public boolean doAction(String value) {
         value = value.toUpperCase();
-        
-        switch (value){
+
+        switch (value) {
             case "G":
                 this.gameGoal();
                 break;
@@ -38,13 +40,13 @@ public class HelpMenuView extends View{
             case "L":
                 this.gameListCountries();
                 break;
-            case"T":
+            case "T":
                 this.gameTravel();
                 break;
             default:
                 System.out.println("\n***Invalid Selection *** Try Again");
                 break;
-    }
+        }
         return false;
     }
 
@@ -54,7 +56,8 @@ public class HelpMenuView extends View{
 
     private void gameBasics() {
         System.out.println("gameBasics() called");
-}
+    }
+
     private void gameListCountries() {
         System.out.println("gameListCountries called");
     }

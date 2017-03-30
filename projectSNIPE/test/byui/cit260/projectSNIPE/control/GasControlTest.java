@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
  * @author rubengonzalezflores
  */
 public class GasControlTest {
-    
+
     public GasControlTest() {
     }
 
@@ -32,7 +32,7 @@ public class GasControlTest {
         double result = instance.calcPricePerGallon(distance, gallonsOfFuel, pricePerGallon);
         assertEquals(expResult, result, 1.0);
         // TODO review the generated test code and remove the default call to fail.
-        
+
         System.out.println("Test Case #2");
         distance = 300;
         gallonsOfFuel = 500;
@@ -40,7 +40,7 @@ public class GasControlTest {
         expResult = -1;
         result = instance.calcPricePerGallon(distance, gallonsOfFuel, pricePerGallon);
         assertEquals(expResult, result, 1.0);
-        
+
         System.out.println("Test Case #2");
         distance = 300;
         gallonsOfFuel = 500;
@@ -48,7 +48,7 @@ public class GasControlTest {
         expResult = -1;
         result = instance.calcPricePerGallon(distance, gallonsOfFuel, pricePerGallon);
         assertEquals(expResult, result, 1.0);
-        
+
         System.out.println("Test Case #3");
         distance = 300;
         gallonsOfFuel = 6100;
@@ -56,7 +56,7 @@ public class GasControlTest {
         expResult = -1;
         result = instance.calcPricePerGallon(distance, gallonsOfFuel, pricePerGallon);
         assertEquals(expResult, result, 1.0);
-        
+
         System.out.println("Test Case #4");
         distance = 300;
         gallonsOfFuel = 2000;
@@ -64,7 +64,7 @@ public class GasControlTest {
         expResult = -1;
         result = instance.calcPricePerGallon(distance, gallonsOfFuel, pricePerGallon);
         assertEquals(expResult, result, 1.0);
-        
+
         System.out.println("Test Case #5");
         distance = 5;
         gallonsOfFuel = 2000;
@@ -72,7 +72,7 @@ public class GasControlTest {
         expResult = -1;
         result = instance.calcPricePerGallon(distance, gallonsOfFuel, pricePerGallon);
         assertEquals(expResult, result, 1.0);
-        
+
         System.out.println("Test Case #6");
         distance = 2500;
         gallonsOfFuel = 2000;
@@ -80,7 +80,7 @@ public class GasControlTest {
         expResult = -1;
         result = instance.calcPricePerGallon(distance, gallonsOfFuel, pricePerGallon);
         assertEquals(expResult, result, 1.0);
-        
+
         System.out.println("Test Case #7");
         distance = 100;
         gallonsOfFuel = 1001;
@@ -88,7 +88,7 @@ public class GasControlTest {
         expResult = 30.03;
         result = instance.calcPricePerGallon(distance, gallonsOfFuel, pricePerGallon);
         assertEquals(expResult, result, 1.0);
-        
+
         System.out.println("Test Case #8");
         distance = 2000;
         gallonsOfFuel = 5999;
@@ -96,7 +96,7 @@ public class GasControlTest {
         expResult = 8.99;
         result = instance.calcPricePerGallon(distance, gallonsOfFuel, pricePerGallon);
         assertEquals(expResult, result, 1.0);
-        
+
         System.out.println("Test Case #9");
         distance = 2000;
         gallonsOfFuel = 5999;
@@ -104,7 +104,7 @@ public class GasControlTest {
         expResult = 17.97;
         result = instance.calcPricePerGallon(distance, gallonsOfFuel, pricePerGallon);
         assertEquals(expResult, result, 1.0);
-        
+
         System.out.println("Test Case #10");
         distance = 10;
         gallonsOfFuel = 1000;
@@ -113,5 +113,5 @@ public class GasControlTest {
         result = instance.calcPricePerGallon(distance, gallonsOfFuel, pricePerGallon);
         assertEquals(expResult, result, 1.0);
     }
-    
+
 }

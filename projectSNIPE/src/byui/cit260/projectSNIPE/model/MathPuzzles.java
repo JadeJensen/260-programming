@@ -13,7 +13,7 @@ import java.util.Objects;
  * @author rubengonzalezflores
  */
 public class MathPuzzles implements Serializable {
-    
+
     private int currentHealth;
     private int mathHeight;
     private int mathWidth;
@@ -23,7 +23,7 @@ public class MathPuzzles implements Serializable {
 
     public MathPuzzles() {
     }
-    
+
     public int getCurrentHealth() {
         return currentHealth;
     }
@@ -121,6 +121,5 @@ public class MathPuzzles implements Serializable {
     public String toString() {
         return "MathPuzzles{" + "currentHealth=" + currentHealth + ", mathHeight=" + mathHeight + ", mathWidth=" + mathWidth + ", mathAnswer=" + mathAnswer + ", mathX=" + mathX + ", mathY=" + mathY + '}';
     }
-    
-    
-     }
+
+}

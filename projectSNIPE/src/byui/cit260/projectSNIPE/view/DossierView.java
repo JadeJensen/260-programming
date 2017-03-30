@@ -9,8 +9,9 @@ package byui.cit260.projectSNIPE.view;
  *
  * @author Jade
  */
-public class DossierView extends View{
-    public DossierView(){
+public class DossierView extends View {
+
+    public DossierView() {
         super("\n"
                 + "\n----------------"
                 + "\n|Dossier Menu     |"
@@ -18,11 +19,12 @@ public class DossierView extends View{
                 + "\nG - Game Menu"
                 + "\nH - Help Menu");
     }
+
     @Override
     public boolean doAction(String value) {
-       value = value.toUpperCase();
-        
-        switch (value){
+        value = value.toUpperCase();
+
+        switch (value) {
             case "M":
                 this.mainMenu();
                 break;
@@ -34,16 +36,17 @@ public class DossierView extends View{
             default:
                 System.out.println("\n***Invalid Selection *** Try Again");
                 break;
-    }
+        }
         return false;
     }
-      private void mainMenu() {
-       MainMenuView mainMenu = new MainMenuView();
-       mainMenu.display();
+
+    private void mainMenu() {
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.display();
     }
 
     private void helpMenu() {
-       HelpMenuView helpMenu = new HelpMenuView();
+        HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
     }
 

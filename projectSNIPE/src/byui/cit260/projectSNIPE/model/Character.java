@@ -14,8 +14,8 @@ import java.util.Objects;
  * @author Jade
  */
 public enum Character implements Serializable {
-        Man("Stan Smith"),
-        Woman("Scarlett O'hara");
+    Man("Stan Smith"),
+    Woman("Scarlett O'hara");
 
     private final String description;
     private final Point coordinates;
@@ -23,22 +23,19 @@ public enum Character implements Serializable {
 
     Character(String description) {
         this.description = description;
-        coordinates =  new Point(1,1);
+        coordinates = new Point(1, 1);
     }
-
-    
 
     public String getDescription() {
         return description;
     }
-
 
     public Point getCoordinants() {
         return coordinates;
     }
 
 
-/*    public double getHealth() {
+    /*    public double getHealth() {
         return health;
     }
 
@@ -49,5 +46,5 @@ public enum Character implements Serializable {
     public String toString() {
         return "Character{" + "name=" + name + ", description=" + description + ", coordinants=" + coordinants + ", health=" + health + '}';
     }
-*/
+     */
 }

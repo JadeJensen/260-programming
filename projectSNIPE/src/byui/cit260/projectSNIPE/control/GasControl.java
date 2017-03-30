@@ -13,47 +13,48 @@ import java.util.Scanner;
  */
 public class GasControl {
 
-    public double calcPricePerGallon(double distance, double gallonsOfFuel, double pricePerGallon){
-        
-       
-        
-        if (distance < 10 || distance > 2000){
+    public double calcPricePerGallon(double distance, double gallonsOfFuel, double pricePerGallon) {
+
+        if (distance < 10 || distance > 2000) {
             return -1;
         }
-        if (pricePerGallon > 6){
+        if (pricePerGallon > 6) {
             return -1;
         }
-        if (gallonsOfFuel < 1000 || gallonsOfFuel > 6000){
+        if (gallonsOfFuel < 1000 || gallonsOfFuel > 6000) {
             return -1;
         }
         double pricePerMile = (gallonsOfFuel * pricePerGallon) / distance;
         return pricePerMile;
     }
-        public String getInput() {
+
+    public String getInput() {
         Scanner keyboard = new Scanner(System.in);
         String value = "";
         boolean valid = false;
-        while (!valid){
+        while (!valid) {
             value = keyboard.nextLine();
             value = value.trim();
-            if (value.length() < 1){
+            if (value.length() < 1) {
                 System.out.println("\nInvalid value: value can not be blank");
                 continue;
-        }
+            }
             break;
         }
         return value;
     }
-    public Double getIntNumber(){
+
+    public Double getIntNumber() {
         Double number = null;
-        while (number == null){
+        while (number == null) {
             String value = this.getInput();
             value = value.trim().toUpperCase();
-            if (value.equals("Q"))
+            if (value.equals("Q")) {
                 break;
-            try{
-            number = Double.parseDouble(value);
-            }catch (NumberFormatException nf){
+            }
+            try {
+                number = Double.parseDouble(value);
+            } catch (NumberFormatException nf) {
                 System.out.println("\nYou must enter a valid number.");
             }
         }

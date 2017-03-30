@@ -17,8 +17,9 @@ import projectsnipe.ProjectSNIPE;
  * @author Jade
  */
 public class MainMenuView extends View {
-    public MainMenuView(){
-    super("\n"
+
+    public MainMenuView() {
+        super("\n"
                 + "\n-------------------"
                 + "\n| Main Menu        |"
                 + "\n-------------------"
@@ -31,22 +32,23 @@ public class MainMenuView extends View {
                 + "\nQ - Quit Game (Or previous Menu)"
                 + "\n-------------------");
     }
+
     @Override
-       public boolean doAction(String value) {
+    public boolean doAction(String value) {
         value = value.toUpperCase();
-        switch (value){
+        switch (value) {
             case "L": // Loads a saved game; current data lost
                 this.loadSavedGame();
                 break;
             case "N": {
-            try {
-                // Starts a new game
-                this.startNewGame();
-            } catch (MapControlException ex) {
-                System.out.println("Oops something went wrong here...");
+                try {
+                    // Starts a new game
+                    this.startNewGame();
+                } catch (MapControlException ex) {
+                    System.out.println("Oops something went wrong here...");
+                }
             }
-        }
-                break;
+            break;
             case "R": //Returns the player location
                 this.playerLocation();
                 break;
@@ -67,14 +69,14 @@ public class MainMenuView extends View {
     }
 
     private void loadSavedGame() {
-       this.console.println("\n\nEnter the file path for the file where the game is saved");
-       String filePath = this.getInput();
-       try{
-           GameControl.getSavedGame(filePath);
-       }catch (Exception ex) {
-           ErrorView.display("MainMenuView", ex.getMessage());
-       }
-       GameMenuView gameMenu = new GameMenuView();
+        this.console.println("\n\nEnter the file path for the file where the game is saved");
+        String filePath = this.getInput();
+        try {
+            GameControl.getSavedGame(filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
     }
 
@@ -93,7 +95,7 @@ public class MainMenuView extends View {
         String filePath = this.getInput();
         try {
             GameControl.saveGame(ProjectSNIPE.getCurrentGame(), filePath);
-        }catch (Exception ex){
+        } catch (Exception ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
         }
     }

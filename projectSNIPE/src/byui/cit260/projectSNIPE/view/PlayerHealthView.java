@@ -11,20 +11,21 @@ import java.util.Scanner;
  *
  * @author Jade
  */
-public class PlayerHealthView extends View{
-        
-    public PlayerHealthView(){
-        super( "\n"
+public class PlayerHealthView extends View {
+
+    public PlayerHealthView() {
+        super("\n"
                 + "\n----------------"
                 + "\n|Player Health Menu     |"
                 + "\nM - Main Menu"
                 + "\nH - Help Menu");
     }
+
     @Override
     public boolean doAction(String value) {
-       value = value.toUpperCase();
-        
-        switch (value){
+        value = value.toUpperCase();
+
+        switch (value) {
             case "M":
                 this.gameMenu();
                 break;
@@ -34,16 +35,17 @@ public class PlayerHealthView extends View{
             default:
                 System.out.println("\n***Invalid Selection *** Try Again");
                 break;
-    }
+        }
         return false;
     }
-      private void gameMenu() {
-       MainMenuView mainMenu = new MainMenuView();
-       mainMenu.display();
+
+    private void gameMenu() {
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.display();
     }
 
     private void helpMenu() {
-       HelpMenuView helpMenu = new HelpMenuView();
+        HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
     }
 }

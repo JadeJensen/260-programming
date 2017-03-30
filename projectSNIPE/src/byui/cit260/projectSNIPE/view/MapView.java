@@ -63,9 +63,9 @@ public class MapView extends View {
     }
 
     private void movePlayer() {
-        
+
         Player player = ProjectSNIPE.getPlayer();
-        
+
 //        try {
 //            MapControl.movePlayerToLocation(player, coordinates);
 //        } catch (MapControlException me) {
@@ -78,7 +78,7 @@ public class MapView extends View {
         String filePath = this.getInput();
         try {
             MapControl.printMap(filePath);
-        }catch (Exception ex){
+        } catch (Exception ex) {
             ErrorView.display("MapView", ex.getMessage());
         }
     }

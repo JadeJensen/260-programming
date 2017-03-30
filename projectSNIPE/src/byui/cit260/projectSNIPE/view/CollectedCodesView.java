@@ -11,9 +11,9 @@ import java.util.Scanner;
  *
  * @author Jade
  */
-public class CollectedCodesView extends View{
-    
-    public CollectedCodesView(){
+public class CollectedCodesView extends View {
+
+    public CollectedCodesView() {
         super("\n"
                 + "\n----------------"
                 + "\n|Collected Codes Menu     |"
@@ -21,10 +21,11 @@ public class CollectedCodesView extends View{
                 + "\nG - Game Menu"
                 + "\nH - Help Menu");
     }
-   @Override
+
+    @Override
     public boolean doAction(String value) {
-       value = value.toUpperCase();
-            switch (value){
+        value = value.toUpperCase();
+        switch (value) {
             case "M":
                 this.mainMenu();
                 break;
@@ -36,20 +37,22 @@ public class CollectedCodesView extends View{
             default:
                 System.out.println("\n***Invalid Selection *** Try Again");
                 break;
-    }
+        }
         return false;
     }
-      private void mainMenu() {
-       MainMenuView mainMenu = new MainMenuView();
-       mainMenu.display();
+
+    private void mainMenu() {
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.display();
     }
 
     private void helpMenu() {
-       HelpMenuView helpMenu = new HelpMenuView();
+        HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
     }
+
     private void gameMenu() {
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
-}
+    }
 }

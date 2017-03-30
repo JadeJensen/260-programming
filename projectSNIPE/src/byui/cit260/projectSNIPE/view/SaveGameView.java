@@ -6,15 +6,14 @@
 package byui.cit260.projectSNIPE.view;
 
 //import java.util.Scanner;
-
 /**
  *
  * @author Jade
  */
-public class SaveGameView extends View{
-        
-    public SaveGameView(){
-        super( "\n"
+public class SaveGameView extends View {
+
+    public SaveGameView() {
+        super("\n"
                 + "\n-------------------------------------"
                 + "\nThis menu shall be further developed."
                 + "\n|Save Game Menu                     |"
@@ -23,11 +22,12 @@ public class SaveGameView extends View{
                 + "\nH - Help Menu"
                 + "\n-------------------------------------");
     }
-       @Override
+
+    @Override
     public boolean doAction(String value) {
-       value = value.toUpperCase();
-        
-        switch (value){
+        value = value.toUpperCase();
+
+        switch (value) {
             case "S":
                 this.saveGame();
                 break;
@@ -40,19 +40,21 @@ public class SaveGameView extends View{
             default:
                 System.out.println("\n***Invalid Selection *** Try Again");
                 break;
-    }
+        }
         return false;
     }
-      private void gameMenu() {
-       MainMenuView mainMenu = new MainMenuView();
-       mainMenu.display();
+
+    private void gameMenu() {
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.display();
     }
 
     private void helpMenu() {
-       HelpMenuView helpMenu = new HelpMenuView();
+        HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
     }
-    private void saveGame(){
+
+    private void saveGame() {
         System.out.println("saveGame function stub called.");
     }
 }

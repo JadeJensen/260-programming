@@ -9,7 +9,7 @@ package byui.cit260.projectSNIPE.exceptions;
  *
  * @author Jade
  */
-public class JadeExceptionClass extends Exception{
+public class JadeExceptionClass extends Exception {
 
     public JadeExceptionClass() {
     }
@@ -29,5 +29,5 @@ public class JadeExceptionClass extends Exception{
     public JadeExceptionClass(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
-    
+
 }

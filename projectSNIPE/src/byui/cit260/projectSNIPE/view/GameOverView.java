@@ -11,17 +11,18 @@ package byui.cit260.projectSNIPE.view;
  * @author Jade
  */
 public class GameOverView {
-       public GameOverView(){
-           this.displayBannerWon();
-       }
-       
-       private void displayBannerWon(){
-           System.out.println("\n==============================================="
-                            + "\n***************CONGRATULATIONS!****************"
-                            + "\n==============================================="
-                            + "\nYou've completed your mission and are now an   "
-                            + "\nofficial Secret Agent! It wasn't an easy task,"
-                            + "\nbut here you are."
-                            + "\nPress Q to return to the Main Menu");
-       }
+
+    public GameOverView() {
+        this.displayBannerWon();
+    }
+
+    private void displayBannerWon() {
+        System.out.println("\n==============================================="
+                + "\n***************CONGRATULATIONS!****************"
+                + "\n==============================================="
+                + "\nYou've completed your mission and are now an   "
+                + "\nofficial Secret Agent! It wasn't an easy task,"
+                + "\nbut here you are."
+                + "\nPress Q to return to the Main Menu");
+    }
 }
