@@ -106,9 +106,10 @@ public class MapView extends View {
 
         System.out.println("The Map of The World");
         System.out.println(divider);
+        System.out.println("    1       2        3");
         for (int i = 0; i < locations.length; i++) {
-
-            System.out.print(i + 1);
+            System.out.println("\n");
+            System.out.print( i + 1 );
             for (Location location : locations[i]) {
                 System.out.print("|");
                 Location currentLocation = location;

@@ -7,9 +7,6 @@ package byui.cit260.projectSNIPE.view;
 
 import byui.cit260.projectSNIPE.control.MapControl;
 import byui.cit260.projectSNIPE.exceptions.MapControlException;
-import byui.cit260.projectSNIPE.model.Game;
-import byui.cit260.projectSNIPE.model.Location;
-import byui.cit260.projectSNIPE.model.Map;
 import byui.cit260.projectSNIPE.model.Player;
 import java.awt.Point;
 import static java.lang.Integer.parseInt;
