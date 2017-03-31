@@ -52,11 +52,12 @@ public class MapControl {
             throw new MapControlException(e.getMessage());
         }
     }
+
     public void changeLocation(Player[] player, Point coordinates) throws MapControlException {
-            Map map = ProjectSNIPE.getCurrentGame().getMap();
-            int newRow = coordinates.x;
-            int newColumn = coordinates.y;
-            
+        Map map = ProjectSNIPE.getCurrentGame().getMap();
+        int newRow = coordinates.x;
+        int newColumn = coordinates.y;
+
         if (newRow > 9 || newColumn > 4 || newRow < 0 || newColumn < 0) {
             throw new MapControlException("Cannot move to this location. This"
                     + "\nlocation is put of bounds.");
@@ -66,7 +67,8 @@ public class MapControl {
         }
 
     }
-     static void assignScenesToLocations(Map map, Scene[] scenes) {
+
+    static void assignScenesToLocations(Map map, Scene[] scenes) {
         Location[][] locations = map.getLocations();
         locations[0][0].setScene(scenes[Scene.SceneType.usaAcademy.ordinal()]);
         locations[0][1].setScene(scenes[Scene.SceneType.usaLibrary.ordinal()]);
@@ -95,6 +97,6 @@ public class MapControl {
         locations[8][0].setScene(scenes[Scene.SceneType.russiaSquare.ordinal()]);
         locations[8][1].setScene(scenes[Scene.SceneType.russiaLenin.ordinal()]);
         locations[8][2].setScene(scenes[Scene.SceneType.russiaCathedral.ordinal()]);
-    System.out.println(locations[0][0]);
+        System.out.println(locations[0][0]);
     }
 }

@@ -242,8 +242,6 @@ public class Scene implements Serializable {
         return scenes;
     }
 
-    
-
     public Scene() {
     }
 

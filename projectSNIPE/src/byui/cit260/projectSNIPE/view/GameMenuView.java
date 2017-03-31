@@ -50,15 +50,14 @@ public class GameMenuView extends View {
             case "P":
                 this.playerHealth();
                 break;
-            case "T":
-        {
-            try {
-                this.gameTravel();
-            } catch (MapControlException ex) {
-                Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            case "T": {
+                try {
+                    this.gameTravel();
+                } catch (MapControlException ex) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
-        }
-                break;
+            break;
             case "V":
                 this.displayMap();
                 break;
@@ -86,7 +85,7 @@ public class GameMenuView extends View {
     }
 
     private void playerHealth() {
-System.out.println("playerHealth() stub called.");
+        System.out.println("playerHealth() stub called.");
     }
 
     private void gameTravel() throws MapControlException {

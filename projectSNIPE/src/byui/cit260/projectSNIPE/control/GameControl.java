@@ -46,6 +46,7 @@ public class GameControl {
 
         MapControl.movePlayerToStartingLocation(map, player);
     }
+
     public static void saveGame(Game game, String filePath) throws GameControlException {
         try (FileOutputStream fops = new FileOutputStream(filePath)) {
             ObjectOutputStream output = new ObjectOutputStream(fops);
