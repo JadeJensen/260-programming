@@ -7,9 +7,6 @@ package byui.cit260.projectSNIPE.view;
 
 import byui.cit260.projectSNIPE.control.GameControl;
 import byui.cit260.projectSNIPE.exceptions.MapControlException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-//import java.util.Scanner;
 import projectsnipe.ProjectSNIPE;
 
 /**

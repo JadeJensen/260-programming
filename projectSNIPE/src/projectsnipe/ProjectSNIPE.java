@@ -35,7 +35,6 @@ public class ProjectSNIPE {
             ProjectSNIPE.logFile = new PrintWriter(filePath);
             StartProgramView startProgramView = new StartProgramView();
             startProgramView.displayStartProgramView();
-            return;
         } catch (Throwable te) {
             System.out.println(te.getMessage());
             te.printStackTrace();

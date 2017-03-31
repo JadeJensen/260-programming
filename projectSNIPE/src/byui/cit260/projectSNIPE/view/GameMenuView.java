@@ -6,8 +6,16 @@
 package byui.cit260.projectSNIPE.view;
 
 import byui.cit260.projectSNIPE.control.MapControl;
+import byui.cit260.projectSNIPE.exceptions.MapControlException;
+import byui.cit260.projectSNIPE.model.Game;
+import byui.cit260.projectSNIPE.model.Location;
 import byui.cit260.projectSNIPE.model.Map;
-import java.util.Scanner;
+import byui.cit260.projectSNIPE.model.Player;
+import java.awt.Point;
+import static java.lang.Integer.parseInt;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import projectsnipe.ProjectSNIPE;
 
 /**
  *
@@ -43,7 +51,13 @@ public class GameMenuView extends View {
                 this.playerHealth();
                 break;
             case "T":
+        {
+            try {
                 this.gameTravel();
+            } catch (MapControlException ex) {
+                Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
                 break;
             case "V":
                 this.displayMap();
@@ -72,28 +86,20 @@ public class GameMenuView extends View {
     }
 
     private void playerHealth() {
-
+System.out.println("playerHealth() stub called.");
     }
 
-    private void gameTravel() {
-
+    private void gameTravel() throws MapControlException {
+        System.out.println("\nInput the new Row");
+        int newRow = parseInt(this.getInput());
+        System.out.println("\nInput the new Column");
+        int newColumn = parseInt(this.getInput());
+        Point newLocation = new Point(newRow, newColumn);
+        Player Player = ProjectSNIPE.getPlayer();
+        MapControl.movePlayerToLocation(Player, newLocation);
     }
 
     private void displayMap() {
-        /*       System.out.println("Not developed yet.");
-       Map map = MapControl.createMap();
-       System.out.println("\nThis is the map locations.");
-       for(int i = 0; i < map.getNoOfRows(); i++){
-       System.out.println("-------------"
-               + "\n " + map.getNoOfRows());   
-               for(int j = 0; j < map.getNoOfColumns(); j++){
-                   System.out.println("||"
-                           + "\n");
-                   location = Map.locations [][];
-                   
-               }
-       }
-         */
         MapView mapView = new MapView();
         mapView.display();
 

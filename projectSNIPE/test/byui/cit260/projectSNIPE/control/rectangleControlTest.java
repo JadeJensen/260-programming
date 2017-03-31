@@ -5,6 +5,7 @@
  */
 package byui.cit260.projectSNIPE.control;
 
+import byui.cit260.projectSNIPE.exceptions.JadeExceptionClass;
 import org.junit.AfterClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -26,7 +27,7 @@ public class rectangleControlTest {
      * Test of rectangleVolumeCalc method, of class rectangleControl.
      */
     @Test
-    public void testRectangleVolumeCalc() {
+    public void testRectangleVolumeCalc() throws JadeExceptionClass {
         System.out.println("Test Case #1");
         double length = 23.0;
         double width = 8.0;

@@ -242,37 +242,7 @@ public class Scene implements Serializable {
         return scenes;
     }
 
-    private static void assignScenesToLocations(Map map, Scene[] scenes) {
-        Location[][] locations = map.getLocations();
-        locations[0][0].setScene(scenes[SceneType.usaAcademy.ordinal()]);
-        locations[0][1].setScene(scenes[SceneType.usaLibrary.ordinal()]);
-        locations[0][2].setScene(scenes[SceneType.usaArch.ordinal()]);
-        locations[1][0].setScene(scenes[SceneType.germanyWall.ordinal()]);
-        locations[1][1].setScene(scenes[SceneType.germanyCathedral.ordinal()]);
-        locations[1][2].setScene(scenes[SceneType.germanyRiver.ordinal()]);
-        locations[2][0].setScene(scenes[SceneType.englandBigBen.ordinal()]);
-        locations[2][1].setScene(scenes[SceneType.englandWestminster.ordinal()]);
-        locations[2][2].setScene(scenes[SceneType.englandPalace.ordinal()]);
-        locations[3][0].setScene(scenes[SceneType.spainTarragona.ordinal()]);
-        locations[3][1].setScene(scenes[SceneType.spainCathedral.ordinal()]);
-        locations[3][2].setScene(scenes[SceneType.spainValencia.ordinal()]);
-        locations[4][0].setScene(scenes[SceneType.franceEiffelTower.ordinal()]);
-        locations[4][1].setScene(scenes[SceneType.franceLouvre.ordinal()]);
-        locations[4][2].setScene(scenes[SceneType.franceSidewalkCafe.ordinal()]);
-        locations[5][0].setScene(scenes[SceneType.canadaStadium.ordinal()]);
-        locations[5][0].setScene(scenes[SceneType.canadaLibrary.ordinal()]);
-        locations[5][0].setScene(scenes[SceneType.canadaCNTower.ordinal()]);
-        locations[6][0].setScene(scenes[SceneType.brazilBeach.ordinal()]);
-        locations[6][1].setScene(scenes[SceneType.brazilForest.ordinal()]);
-        locations[6][2].setScene(scenes[SceneType.brazilSaoPaolo.ordinal()]);
-        locations[7][0].setScene(scenes[SceneType.australiaOperaHouse.ordinal()]);
-        locations[7][1].setScene(scenes[SceneType.australiaJail.ordinal()]);
-        locations[7][2].setScene(scenes[SceneType.australiaBridge.ordinal()]);
-        locations[8][0].setScene(scenes[SceneType.russiaSquare.ordinal()]);
-        locations[8][1].setScene(scenes[SceneType.russiaLenin.ordinal()]);
-        locations[8][2].setScene(scenes[SceneType.russiaCathedral.ordinal()]);
-
-    }
+    
 
     public Scene() {
     }

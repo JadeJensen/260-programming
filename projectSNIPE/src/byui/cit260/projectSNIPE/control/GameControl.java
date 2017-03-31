@@ -10,7 +10,6 @@ import byui.cit260.projectSNIPE.model.Game;
 import byui.cit260.projectSNIPE.model.Item;
 import byui.cit260.projectSNIPE.model.Map;
 import byui.cit260.projectSNIPE.model.Player;
-import byui.cit260.projectSNIPE.model.Scene;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
@@ -47,12 +46,6 @@ public class GameControl {
 
         MapControl.movePlayerToStartingLocation(map, player);
     }
-
-    static void assignScenesToLocations(Map map, Scene[] scenes) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        System.out.println("assignScenesToLocations called");
-    }
-
     public static void saveGame(Game game, String filePath) throws GameControlException {
         try (FileOutputStream fops = new FileOutputStream(filePath)) {
             ObjectOutputStream output = new ObjectOutputStream(fops);

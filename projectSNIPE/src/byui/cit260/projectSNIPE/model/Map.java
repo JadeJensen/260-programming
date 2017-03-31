@@ -6,7 +6,6 @@
 package byui.cit260.projectSNIPE.model;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  *

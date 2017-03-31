@@ -67,7 +67,7 @@ public class Dossier implements Serializable {
 
     @Override
     public String toString() {
-        return "Dossier{" + "dossierNumber=" + dossierNumber + ", location=" + location + '}';
+        return "Dossier{" + "dossierNumber=" + dossierNumber + ", location = " + location + '}';
     }
 
 }

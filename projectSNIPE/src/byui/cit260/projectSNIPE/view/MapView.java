@@ -7,9 +7,14 @@ package byui.cit260.projectSNIPE.view;
 
 import byui.cit260.projectSNIPE.control.MapControl;
 import byui.cit260.projectSNIPE.exceptions.MapControlException;
+import byui.cit260.projectSNIPE.model.Game;
+import byui.cit260.projectSNIPE.model.Location;
+import byui.cit260.projectSNIPE.model.Map;
 import byui.cit260.projectSNIPE.model.Player;
 import java.awt.Point;
-import java.util.Scanner;
+import static java.lang.Integer.parseInt;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import projectsnipe.ProjectSNIPE;
 
 /**
@@ -24,6 +29,7 @@ public class MapView extends View {
                 + "\n|Map Menu     |"
                 + "\nM - Main Menu"
                 + "\nH - Help Menu"
+                + "\nD - Display Map WARNING: NOT FULLY DEVELOPED!!!"
                 + "\nP - Print Scene names and descriptions to a file."
                 + "\nL - Move Player");
     }
@@ -39,11 +45,19 @@ public class MapView extends View {
             case "H":
                 this.helpMenu();
                 break;
-            case "L":
-                this.movePlayer();
-                break;
+            case "L": {
+                try {
+                    this.movePlayer();
+                } catch (MapControlException ex) {
+                    Logger.getLogger(MapView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
             case "P":
                 this.printScene();
+                break;
+            case "D":
+                this.displayMap();
                 break;
             default:
                 System.out.println("\n***Invalid Selection *** Try Again");
@@ -62,15 +76,14 @@ public class MapView extends View {
         helpMenu.display();
     }
 
-    private void movePlayer() {
-
-        Player player = ProjectSNIPE.getPlayer();
-
-//        try {
-//            MapControl.movePlayerToLocation(player, coordinates);
-//        } catch (MapControlException me) {
-//            System.out.println(me.getMessage());
-//        }
+    private void movePlayer() throws MapControlException {
+        System.out.println("\nInput the new Row");
+        int newRow = parseInt(this.getInput());
+        System.out.println("\nInput the new Column");
+        int newColumn = parseInt(this.getInput());
+        Point newLocation = new Point(newRow, newColumn);
+        Player Player = ProjectSNIPE.getPlayer();
+        MapControl.movePlayerToLocation(Player, newLocation);
     }
 
     private void printScene() {
@@ -78,8 +91,31 @@ public class MapView extends View {
         String filePath = this.getInput();
         try {
             MapControl.printMap(filePath);
-        } catch (Exception ex) {
+        } catch (MapControlException ex) {
             ErrorView.display("MapView", ex.getMessage());
         }
+    }
+
+    private void displayMap() {
+        Game game = ProjectSNIPE.getCurrentGame();
+        Map map = game.getMap();
+        Location[][] locations = map.getLocations();
+
+        String dash = "-";
+        String divider = new String(new char[55]).replace("\0", dash);
+
+        System.out.println("The Map of The World");
+        System.out.println(divider);
+        for (int i = 0; i < locations.length; i++) {
+
+            System.out.print(i + 1);
+            for (Location location : locations[i]) {
+                System.out.print("|");
+                Location currentLocation = location;
+                System.out.print(location.getScene().getMapSymbol());
+            }
+            System.out.print("|");
+        }
+        System.out.println("\n" + divider);
     }
 }
