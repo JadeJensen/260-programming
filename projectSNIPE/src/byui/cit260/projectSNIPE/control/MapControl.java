@@ -86,8 +86,8 @@ public class MapControl {
         locations[4][1].setScene(scenes[Scene.SceneType.franceLouvre.ordinal()]);
         locations[4][2].setScene(scenes[Scene.SceneType.franceSidewalkCafe.ordinal()]);
         locations[5][0].setScene(scenes[Scene.SceneType.canadaStadium.ordinal()]);
-        locations[5][0].setScene(scenes[Scene.SceneType.canadaLibrary.ordinal()]);
-        locations[5][0].setScene(scenes[Scene.SceneType.canadaCNTower.ordinal()]);
+        locations[5][1].setScene(scenes[Scene.SceneType.canadaLibrary.ordinal()]);
+        locations[5][2].setScene(scenes[Scene.SceneType.canadaCNTower.ordinal()]);
         locations[6][0].setScene(scenes[Scene.SceneType.brazilBeach.ordinal()]);
         locations[6][1].setScene(scenes[Scene.SceneType.brazilForest.ordinal()]);
         locations[6][2].setScene(scenes[Scene.SceneType.brazilSaoPaolo.ordinal()]);
